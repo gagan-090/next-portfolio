@@ -1,0 +1,513 @@
+'use client';
+
+import React, { useRef } from 'react';
+import Link from 'next/link';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { ArrowDown, ArrowRight, Clock, Calendar } from 'lucide-react';
+import { projectsData } from '../data/projects';
+import { servicesData } from '../data/services';
+import { locationsData } from '../data/locations';
+import { MarqueeTicker } from '../components/common/MarqueeTicker';
+import { AbstractMockup } from '../components/ui/AbstractMockup';
+import AnimatedText from '../components/ui/AnimatedText';
+import AnimatedCounter from '../components/ui/AnimatedCounter';
+import ParallaxSection from '../components/ui/ParallaxSection';
+import MagneticButton from '../components/ui/MagneticButton';
+import { FeaturedProject } from '../components/ui/FeaturedProject';
+import { fadeUp, fadeIn, staggerContainer, staggerContainerSlow, blurIn } from '../utils/animations';
+import { format } from 'date-fns';
+import DeliveredWork from '@/components/projects/DeliveredWork';
+import { site } from '@/lib/site';
+
+// Tech stack items
+const techStack = [
+  'Flutter', 'React Native', 'Dart', 'TypeScript', 'JavaScript', 
+  'Node.js', 'Supabase', 'PostgreSQL', 'Firebase', 'REST APIs',
+  'Next.js', 'Redux', 'Riverpod', 'Docker', 'AWS'
+];
+
+export const HomeView = ({ latestBlogs = [], faqs = [] }) => {
+  const heroRef = useRef(null);
+
+  // Featured projects (top 2)
+  const featuredProjects = projectsData.filter(p => p.featured || p.id === 'hashkart').slice(0, 2);
+
+  // Scroll-linked parallax for hero section
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"]
+  });
+  const heroY = useTransform(scrollYProgress, [0, 1], [0, 150]);
+  const heroOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+
+  return (
+    <div className="w-full bg-white select-none">
+
+      {/* ════════════════════════════════════════════════════════ */}
+      {/* SECTION 1 — CINEMATIC HERO                              */}
+      {/* ════════════════════════════════════════════════════════ */}
+      <section ref={heroRef} className="relative min-h-[90vh] flex flex-col justify-center overflow-hidden">
+        {/* Subtle dot grid background */}
+        <div className="absolute inset-0 dot-grid-bg-subtle opacity-40 pointer-events-none" />
+        
+        <motion.div 
+          style={{ y: heroY, opacity: heroOpacity }}
+          className="max-w-[1200px] mx-auto px-gutter w-full"
+        >
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center pt-12 md:pt-0">
+            {/* Left Column — Text */}
+            <div className="col-span-12 md:col-span-7 flex flex-col justify-center">
+              <h1 className="mb-4">
+                {/* Role Label */}
+                <motion.span 
+                  className="font-label-mono text-label-mono text-primary uppercase tracking-[0.2em] block mb-6"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                >
+                  Freelance Developer — Apps · Websites · SaaS · CRM
+                </motion.span>
+                {/* Name — Giant Character Reveal */}
+                <AnimatedText 
+                  text="Gagan" 
+                  splitBy="char" 
+                  className="font-display-lg text-[56px] md:text-[90px] lg:text-[120px] text-on-surface tracking-tighter leading-[0.9] font-extrabold block"
+                  stagger={0.04}
+                  once={true}
+                />{' '}
+                <AnimatedText 
+                  text="Shukla" 
+                  splitBy="char" 
+                  className="font-display-lg text-[56px] md:text-[90px] lg:text-[120px] tracking-tighter leading-[0.9] font-extrabold gradient-text block"
+                  stagger={0.04}
+                  delay={0.3}
+                  once={true}
+                />
+              </h1>
+
+              {/* Subtitle with typing cursor */}
+              <motion.p 
+                className="font-subhead-italic text-subhead-italic text-on-surface-variant italic mb-10 max-w-xl typing-cursor"
+                initial={{ opacity: 1, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              >
+                Available for freelance project contracts only, in India and worldwide. I build mobile apps, websites, SaaS products, CRM, HRMS, ERP and bid management systems, from your first idea to launch.
+              </motion.p>
+
+              <p className="font-body-main text-sm text-on-surface-variant mb-6">
+                4+ years of development experience. Built VRC Mobility, a bid management system, HRMS and SaaS software, with logistics app experience through TruckMitr and TMConnect.
+                Based in Noida, India. Remote projects welcome from any country.
+              </p>
+              {/* CTA Buttons */}
+              <motion.div 
+                className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 1.0, ease: [0.16, 1, 0.3, 1] }}
+              >
+                <MagneticButton
+                  href="/contact"
+                  className="w-full sm:w-auto text-center bg-[#0A0A0A] text-white px-8 py-4 font-label-mono text-label-mono uppercase tracking-widest hover:bg-primary transition-all duration-300 cursor-pointer"
+                >
+                  Start Your Project
+                </MagneticButton>
+                <MagneticButton
+                  href="/projects"
+                  className="w-full sm:w-auto text-center border border-[#0A0A0A] text-on-surface px-8 py-4 font-label-mono text-label-mono uppercase tracking-widest hover:bg-[#F5F8FF] transition-all duration-300 cursor-pointer"
+                >
+                  View My Work
+                </MagneticButton>
+              </motion.div>
+              <a href={`${site.whatsapp}?text=${encodeURIComponent("Hi Gagan, I would like to discuss a freelance project.")}`} target="_blank" rel="noopener noreferrer" className="mt-5 text-primary underline underline-offset-4 font-body-main text-sm">Discuss your idea on WhatsApp →</a>
+            </div>
+
+            {/* Right Column — Abstract Graphic */}
+            <motion.div 
+              className="col-span-12 md:col-span-5 flex justify-center items-center mt-12 md:mt-0"
+              initial={{ opacity: 0, scale: 0.9, rotate: -2 }}
+              animate={{ opacity: 1, scale: 1, rotate: 0 }}
+              transition={{ duration: 1.2, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+            >
+              <ParallaxSection speed={15}>
+                <AbstractMockup />
+              </ParallaxSection>
+            </motion.div>
+          </div>
+        </motion.div>
+
+        {/* Scroll Indicator */}
+        <motion.div 
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.5, duration: 0.8 }}
+        >
+          <span className="font-label-mono text-[10px] uppercase tracking-[0.3em] text-on-surface-variant">Scroll</span>
+          <div className="scroll-indicator">
+            <ArrowDown size={16} className="text-on-surface-variant" />
+          </div>
+        </motion.div>
+      </section>
+
+      {/* ════════════════════════════════════════════════════════ */}
+      {/* SECTION 2 — MARQUEE TICKER                              */}
+      {/* ════════════════════════════════════════════════════════ */}
+      <MarqueeTicker />
+      <DeliveredWork />
+
+      {/* ════════════════════════════════════════════════════════ */}
+      {/* SECTION 3 — IMPACT STATS                                */}
+      {/* ════════════════════════════════════════════════════════ */}
+      <section className="max-w-[1200px] mx-auto px-gutter py-section-padding border-b border-outline-variant">
+        <motion.span 
+          className="font-label-mono text-label-mono text-on-surface-variant uppercase tracking-widest block mb-16"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          00 / IMPACT
+        </motion.span>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-y-16 gap-x-12">
+          <AnimatedCounter value="28+" label="Clients Served" sublabel="Freelance clients served" />
+          <AnimatedCounter value="4+" label="Years" sublabel="Development experience" />
+          <AnimatedCounter value="20+" label="Projects Delivered" sublabel="Completed development projects" />
+        </div>
+      </section>
+
+      {/* ════════════════════════════════════════════════════════ */}
+      {/* SECTION 3B — SERVICES                                   */}
+      {/* ════════════════════════════════════════════════════════ */}
+      <section className="max-w-[1200px] mx-auto px-gutter py-section-padding border-b border-outline-variant">
+        <div className="flex flex-col md:flex-row justify-between md:items-end gap-6 mb-16">
+          <div>
+            <span className="font-label-mono text-label-mono text-on-surface-variant uppercase tracking-widest block mb-4">
+              01 / WHAT I BUILD
+            </span>
+            <h2 className="font-headline-md text-[32px] md:text-headline-md text-on-surface max-w-2xl">
+              Apps, websites and business software, built end to end.
+            </h2>
+          </div>
+          <Link
+            href="/services"
+            className="inline-flex items-center gap-2 font-label-mono text-label-mono uppercase tracking-widest text-on-surface hover:text-primary transition-colors group"
+          >
+            All Services
+            <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+          </Link>
+        </div>
+        <motion.ul
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-outline-variant border border-outline-variant"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+        >
+          {servicesData.map((service) => (
+            <motion.li key={service.slug} variants={fadeUp} className="bg-white">
+              <Link
+                href={`/services/${service.slug}`}
+                className="group flex flex-col h-full p-6 md:p-8 hover:bg-[#F5F8FF] transition-colors duration-300"
+              >
+                <span className="material-symbols-outlined text-primary text-[32px] mb-6" aria-hidden="true">{service.icon}</span>
+                <h3 className="font-headline-md text-lg font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">
+                  {service.name}
+                </h3>
+                <p className="font-body-main text-[14px] text-on-surface-variant leading-relaxed mb-6">{service.headline}</p>
+                <span className="mt-auto font-label-mono text-[11px] uppercase tracking-widest text-on-surface inline-flex items-center gap-2">
+                  Learn more <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+                </span>
+              </Link>
+            </motion.li>
+          ))}
+        </motion.ul>
+      </section>
+
+      {/* ════════════════════════════════════════════════════════ */}
+      {/* SECTION 3C — CLIENTS WORLDWIDE                          */}
+      {/* ════════════════════════════════════════════════════════ */}
+      <section className="max-w-[1200px] mx-auto px-gutter py-16 border-b border-outline-variant">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
+          <div className="max-w-md">
+            <span className="font-label-mono text-label-mono text-on-surface-variant uppercase tracking-widest block mb-3">
+              WORKING WITH CLIENTS IN
+            </span>
+            <p className="font-body-main text-on-surface-variant">
+              Remote freelance projects with live overlap in your time zone, and in-person meetings in Delhi NCR.
+            </p>
+          </div>
+          <ul className="flex flex-wrap gap-3 md:justify-end">
+            {locationsData.map((l) => (
+              <li key={l.slug}>
+                <Link
+                  href={`/hire/${l.slug}`}
+                  className="inline-flex items-center gap-2 border border-outline-variant px-4 py-2 font-body-main text-[14px] hover:border-on-surface hover:text-primary transition-colors"
+                >
+                  <span aria-hidden="true">{l.flag}</span> {l.shortMarket || l.market}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* ════════════════════════════════════════════════════════ */}
+      {/* SECTION 4 — FEATURED PROJECTS                           */}
+      {/* ════════════════════════════════════════════════════════ */}
+      <section className="max-w-[1200px] mx-auto px-gutter py-section-padding border-b border-outline-variant">
+        <div className="flex justify-between items-end mb-16">
+          <div>
+            <motion.span 
+              className="font-label-mono text-label-mono text-on-surface-variant uppercase tracking-widest block mb-4"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              02 / SELECTED WORK
+            </motion.span>
+            <AnimatedText 
+              text="Crafted with Precision" 
+              splitBy="word" 
+              className="font-headline-md text-headline-md text-on-surface"
+            />
+          </div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            <Link 
+              href="/projects" 
+              className="hidden md:inline-flex items-center gap-2 font-label-mono text-label-mono uppercase tracking-widest text-on-surface hover:text-primary transition-colors group"
+            >
+              View All
+              <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </motion.div>
+        </div>
+
+        <motion.div 
+          className="flex flex-col gap-12"
+          variants={staggerContainerSlow}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+        >
+          {featuredProjects.map((project, index) => (
+            <motion.div key={project.id} variants={fadeUp}>
+              <FeaturedProject project={project} />
+            </motion.div>
+          ))}
+        </motion.div>
+      </section>
+
+      {/* ════════════════════════════════════════════════════════ */}
+      {/* SECTION 5 — LATEST FROM THE BLOG                        */}
+      {/* ════════════════════════════════════════════════════════ */}
+      {latestBlogs.length > 0 && (
+        <section className="max-w-[1200px] mx-auto px-gutter py-section-padding border-b border-outline-variant">
+          <div className="flex justify-between items-end mb-16">
+            <div>
+              <motion.span 
+                className="font-label-mono text-label-mono text-on-surface-variant uppercase tracking-widest block mb-4"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                03 / JOURNAL
+              </motion.span>
+              <AnimatedText 
+                text="Latest Writings" 
+                splitBy="word" 
+                className="font-headline-md text-headline-md text-on-surface"
+              />
+            </div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              <Link 
+                href="/blog" 
+                className="hidden md:inline-flex items-center gap-2 font-label-mono text-label-mono uppercase tracking-widest text-on-surface hover:text-primary transition-colors group"
+              >
+                Read All
+                <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </motion.div>
+          </div>
+
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+            variants={staggerContainerSlow}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+          >
+            {latestBlogs.map((blog) => (
+              <motion.article 
+                key={blog.id} 
+                variants={fadeUp}
+                className="group"
+              >
+                <Link href={`/blog/${blog.slug}`} className="block">
+                  {/* Cover Image */}
+                  {blog.cover_image_url && (
+                    <div className="overflow-hidden mb-5 aspect-[16/9] bg-surface-container border border-outline-variant">
+                      <img
+                        loading="lazy"
+                        decoding="async"
+                        src={blog.cover_image_url}
+                        alt={blog.title}
+                        className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500 ease-out"
+                      />
+                    </div>
+                  )}
+
+                  {/* Category */}
+                  {blog.category?.name && (
+                    <span className="inline-block font-label-mono text-[10px] uppercase tracking-[0.15em] text-primary border border-primary/30 bg-primary/5 px-2 py-0.5 mb-3">
+                      {blog.category.name}
+                    </span>
+                  )}
+
+                  {/* Title */}
+                  <h3 className="font-headline-md text-lg font-bold text-on-surface group-hover:text-primary transition-colors duration-200 leading-snug mb-3">
+                    {blog.title}
+                  </h3>
+
+                  {/* Meta */}
+                  <div className="flex items-center gap-4 text-on-surface-variant text-[12px] font-label-mono">
+                    {blog.published_at && (
+                      <span className="flex items-center gap-1.5">
+                        <Calendar size={11} />
+                        {format(new Date(blog.published_at), 'MMM d, yyyy')}
+                      </span>
+                    )}
+                    {blog.reading_time_minutes && (
+                      <span className="flex items-center gap-1.5">
+                        <Clock size={11} />
+                        {blog.reading_time_minutes} min
+                      </span>
+                    )}
+                  </div>
+                </Link>
+              </motion.article>
+            ))}
+          </motion.div>
+
+          {/* Mobile "Read All" link */}
+          <motion.div 
+            className="mt-10 md:hidden"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            <Link 
+              href="/blog" 
+              className="inline-flex items-center gap-2 font-label-mono text-label-mono uppercase tracking-widest text-on-surface hover:text-primary transition-colors"
+            >
+              Read All Articles
+              <ArrowRight size={14} />
+            </Link>
+          </motion.div>
+        </section>
+      )}
+
+      {/* ════════════════════════════════════════════════════════ */}
+      {/* SECTION 6 — TECH STACK RIBBON                           */}
+      {/* ════════════════════════════════════════════════════════ */}
+      <section className="border-b border-outline-variant py-10 overflow-hidden">
+        <div className="tech-scroll-container">
+          <div className="tech-scroll-content">
+            {[...techStack, ...techStack].map((tech, i) => (
+              <span 
+                key={i} 
+                className="font-label-mono text-[13px] uppercase tracking-[0.2em] text-on-surface-variant whitespace-nowrap flex items-center gap-3"
+              >
+                <span className="w-1.5 h-1.5 bg-primary rotate-45 inline-block flex-shrink-0" />
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ════════════════════════════════════════════════════════ */}
+      {/* SECTION 6B — FAQ (mirrors FAQPage schema)               */}
+      {/* ════════════════════════════════════════════════════════ */}
+      {faqs.length > 0 && (
+        <section className="max-w-[1200px] mx-auto px-gutter py-section-padding border-b border-outline-variant">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
+            <div className="md:col-span-4">
+              <span className="font-label-mono text-label-mono text-on-surface-variant uppercase tracking-widest block mb-4">
+                04 / FAQ
+              </span>
+              <h2 className="font-headline-md text-[32px] md:text-headline-md text-on-surface">Questions clients ask</h2>
+            </div>
+            <div className="md:col-span-8 divide-y divide-outline-variant border-y border-outline-variant">
+              {faqs.map((faq) => (
+                <details key={faq.q} className="group py-6">
+                  <summary className="flex justify-between items-start gap-6 cursor-pointer list-none font-body-main font-bold text-[17px] text-on-surface">
+                    {faq.q}
+                    <span className="material-symbols-outlined text-primary transition-transform duration-300 group-open:rotate-45" aria-hidden="true">add</span>
+                  </summary>
+                  <p className="font-body-main text-on-surface-variant leading-relaxed mt-4 max-w-2xl">{faq.a}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ════════════════════════════════════════════════════════ */}
+      {/* SECTION 7 — CTA                                         */}
+      {/* ════════════════════════════════════════════════════════ */}
+      <section className="max-w-[1200px] mx-auto px-gutter py-section-padding relative">
+        {/* Subtle background pattern */}
+        <div className="absolute inset-0 dot-grid-bg-subtle opacity-20 pointer-events-none" />
+        
+        <div className="flex flex-col md:flex-row justify-between items-center gap-12 relative z-10">
+          <div className="max-w-2xl">
+            <motion.span 
+              className="font-label-mono text-label-mono text-on-surface-variant uppercase tracking-widest block mb-6"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              05 / CONNECT
+            </motion.span>
+            <AnimatedText 
+              text="Let's build the next big thing." 
+              splitBy="word" 
+              className="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-[64px] text-on-surface leading-[1.05]"
+              stagger={0.1}
+            />
+          </div>
+          <div className="flex flex-col gap-6 items-center md:items-end">
+            <MagneticButton
+              href="/contact"
+              className="w-full md:w-auto bg-[#0A0A0A] text-white px-12 py-6 font-label-mono text-label-mono uppercase tracking-widest text-center hover:bg-primary transition-all duration-300 cursor-pointer"
+            >
+              Get In Touch
+            </MagneticButton>
+            <p className="font-body-main text-on-surface-variant text-center md:text-right flex items-center gap-2">
+              <span className="relative flex h-3 w-3">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+              </span>
+              Taking new freelance projects: India, USA, UK, UAE & worldwide.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+export default HomeView;

@@ -1,0 +1,194 @@
+'use client';
+
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
+import Image from 'next/image';
+import { GithubIcon } from '../components/ui/SocialIcons';
+import { projectsData } from '../data/projects';
+import { StatCard } from '../components/ui/StatCard';
+import { fadeUp } from '../utils/animations';
+import DeliveredWork from '@/components/projects/DeliveredWork';
+
+const TechStackBanner = ({ type }) => {
+  const isFlutter = type.toUpperCase() === 'FLUTTER';
+  return (
+    <div className="w-full h-full bg-[#0A0A0A] flex flex-col items-center justify-center relative p-8 select-none overflow-hidden">
+      <div className={`absolute w-48 h-48 rounded-full blur-[80px] opacity-15 pointer-events-none ${isFlutter ? 'bg-[#0284C7]' : 'bg-[#0891B2]'}`} />
+      {isFlutter ? (
+        <svg viewBox="0 0 2000 2000" className="w-20 h-20 filter drop-shadow-[0_0_15px_rgba(2,132,199,0.3)]">
+          <path fill="#47C5FB" d="M1411.3 759.2L915.2 263.1H0l683 683.1L0 1629.3h915.2l496.1-496.1 496.1-496.1-496.1 122.1z" />
+          <path fill="#02569B" d="M1411.3 759.2l-496.1 496.1 496.1 496.1H1907l-495.7-496.1 495.7-496.1h-495.7z" />
+          <path fill="#0175C2" d="M915.2 1255.3L419.1 1751.4H0l683-683.1 232.2 187z" />
+        </svg>
+      ) : (
+        <svg viewBox="-11.5 -10.23174 23 20.46348" className="w-20 h-20 text-[#0891B2] filter drop-shadow-[0_0_15px_rgba(8,145,178,0.3)]" fill="none" stroke="currentColor">
+          <circle cx="0" cy="0" r="2.05" fill="#0891B2" stroke="none" />
+          <g stroke="#0891B2" strokeWidth="0.8">
+            <ellipse rx="11" ry="4.2" />
+            <ellipse rx="11" ry="4.2" transform="rotate(60)" />
+            <ellipse rx="11" ry="4.2" transform="rotate(120)" />
+          </g>
+        </svg>
+      )}
+      <span className="font-label-mono text-[10px] text-white/50 uppercase tracking-[0.2em] mt-6 block">
+        {type.toUpperCase()} Developer
+      </span>
+    </div>
+  );
+};
+
+export const ProjectsView = () => {
+  const [activeFilter, setActiveFilter] = useState('ALL');
+  const filters = ['ALL', 'FLUTTER', 'REACT NATIVE'];
+  const filteredProjects = activeFilter === 'ALL'
+    ? projectsData
+    : projectsData.filter(p => p.type.toUpperCase() === activeFilter);
+
+  return (
+    <div className="w-full bg-white select-none">
+
+      {/* Header */}
+      <section className="max-w-[1200px] mx-auto px-gutter pt-12 pb-stack-lg border-b border-outline-variant">
+        <motion.div
+          className="flex flex-col md:flex-row md:items-end justify-between gap-8 md:gap-stack-md mt-12 md:mt-20"
+          initial="hidden"
+          animate="visible"
+          variants={fadeUp}
+        >
+          <div>
+            <span className="font-label-mono text-label-mono text-primary uppercase tracking-widest block mb-2">02</span>
+            <h1 className="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface">Projects</h1>
+            <p className="font-body-main text-on-surface-variant mt-4 max-w-xl">Case studies of production apps, e-commerce platforms, logistics tools and enterprise HRMS/CRM software I have designed and built.</p>
+          </div>
+          <div className="flex flex-wrap gap-8 md:gap-16 mb-2">
+            <StatCard label="Completed" value={`${projectsData.length} Products`} />
+            <StatCard label="Availability" value="Immediate" />
+          </div>
+        </motion.div>
+      </section>
+
+      <DeliveredWork />
+      {/* Filter and Portfolio Grid */}
+      <section className="max-w-[1200px] mx-auto px-gutter py-16 md:py-[120px]">
+        {/* Filters */}
+        <div className="flex flex-wrap gap-4 border-b border-outline-variant pb-6 mb-12">
+          {filters.map((filter) => (
+            <button
+              key={filter}
+              onClick={() => setActiveFilter(filter)}
+              className={`font-label-mono text-[12px] uppercase tracking-widest px-6 py-2 transition-colors duration-300 ${
+                activeFilter === filter
+                  ? 'bg-on-surface text-surface'
+                  : 'border border-outline-variant hover:border-on-surface'
+              }`}
+            >
+              {filter}
+            </button>
+          ))}
+        </div>
+
+        {/* Portfolio Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <AnimatePresence mode="popLayout">
+            {filteredProjects.map((project) => (
+              <motion.div
+                key={project.id}
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                className="relative p-6 flex flex-col justify-between group"
+              >
+                {/* Default border */}
+                <div className="absolute inset-0 border border-outline-variant pointer-events-none" />
+                
+                {/* Hover border (GPU composited via opacity, zero layout shift) */}
+                <div className="absolute inset-0 border border-on-surface opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
+                <div className="relative z-10">
+                  {/* Image container */}
+                  <div className="overflow-hidden border border-outline-variant mb-6 relative bg-surface-container">
+                    <div className="h-[250px] md:h-[300px] w-full overflow-hidden flex items-center justify-center">
+                      {['truckmitr', 'TMConnact', 'hrms-crm'].includes(project.id) ? (
+                        <TechStackBanner type={project.type} />
+                      ) : (
+                        <div className="p-4 w-full h-full flex items-center justify-center overflow-hidden">
+                          <Image
+                            src={project.image}
+                            alt={`${project.title} — ${project.type} app screenshot`}
+                            sizes="(min-width: 768px) 560px, 100vw"
+                            placeholder="blur"
+                            className="w-full h-full object-contain grayscale group-hover:grayscale-0 scale-100 group-hover:scale-105 transition-all duration-500 ease-out"
+                          />
+                        </div>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Title row */}
+                  <div className="flex justify-between items-start mb-4">
+                    <h2 className="font-headline-md text-2xl font-bold text-on-surface">
+                      {project.title}
+                    </h2>
+                    <span className="font-label-mono text-[10px] text-primary border border-outline-variant px-3 py-1 flex-shrink-0 ml-4">
+                      {project.type.toUpperCase()}
+                    </span>
+                  </div>
+
+                  <p className="font-body-main text-[14px] text-on-surface-variant leading-relaxed mb-6">
+                    {project.longDescription}
+                  </p>
+                </div>
+
+                <div className="relative z-10">
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {project.tags.map((tag, idx) => (
+                      <span
+                        key={idx}
+                        className="bg-secondary-container text-on-secondary-container px-2 py-0.5 font-label-mono text-[10px] border border-outline-variant"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Action row */}
+                  <div className="pt-4 border-t border-outline-variant flex justify-between items-center">
+                    <Link
+                      href={`/projects/${project.id}`}
+                      aria-label={`View ${project.title} case study`}
+                      className="font-label-mono text-label-mono uppercase tracking-widest text-on-surface hover:text-[#2563EB] inline-flex items-center gap-2 group/btn transition-colors duration-200"
+                      style={{ transform: 'translateZ(0)' }}
+                    >
+                      View Project
+                      <span className="material-symbols-outlined text-[16px] transition-transform duration-300 group-hover/btn:translate-x-1">
+                        arrow_forward
+                      </span>
+                    </Link>
+
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="View Source on GitHub"
+                        aria-label={`${project.title} source code on GitHub`}
+                        className="text-on-surface-variant hover:text-[#2563EB] transition-colors duration-200 flex items-center justify-center w-8 h-8 flex-shrink-0"
+                        style={{ transform: 'translateZ(0)' }}
+                      >
+                        <GithubIcon size={20} strokeWidth={1.5} />
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </div>
+      </section>
+    </div>
+  );
+};
+export default ProjectsView;

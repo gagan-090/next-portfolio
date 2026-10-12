@@ -1,0 +1,31 @@
+{
+  "name": "gagan-portfolio-next",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "resume:pdf": "node scripts/build-resume-pdf.mjs",
+    "seo:check": "node scripts/check-seo.mjs",
+    "seo:pagination-check": "node scripts/check-sitemap-pagination.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.117.3",
+    "date-fns": "^4.4.0",
+    "framer-motion": "^12.43.0",
+    "lucide-react": "^1.52.0",
+    "mermaid": "^11.17.2",
+    "next": "^16.4.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "react-markdown": "^10.1.0",
+    "react-syntax-highlighter": "^16.1.1",
+    "remark-gfm": "^4.0.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.6.1",
+    "postcss": "^8.5.29",
+    "tailwindcss": "^3.4.19"
+  }
+}
