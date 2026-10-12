@@ -65,7 +65,7 @@ export const HomeView = ({ latestBlogs = [], faqs = [] }) => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                 >
-                  Freelance Developer — Apps · Websites · SaaS · CRM
+                  Freelance Logistics & Mobile App Developer
                 </motion.span>
                 {/* Name — Giant Character Reveal */}
                 <AnimatedText 
@@ -92,7 +92,7 @@ export const HomeView = ({ latestBlogs = [], faqs = [] }) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
               >
-                Available for freelance project contracts only, in India and worldwide. I build mobile apps, websites, SaaS products, CRM, HRMS, ERP and bid management systems, from your first idea to launch.
+                I build logistics apps, websites and SaaS products as a freelance developer based in Noida, India. My relevant work includes TruckMitr, TMConnect and VRC Mobility. With 4+ years of development experience, I turn business workflows into scoped releases. Send your project brief by email or WhatsApp; no calls required.
               </motion.p>
 
               <p className="font-body-main text-sm text-on-surface-variant mb-6">
@@ -234,7 +234,7 @@ export const HomeView = ({ latestBlogs = [], faqs = [] }) => {
               WORKING WITH CLIENTS IN
             </span>
             <p className="font-body-main text-on-surface-variant">
-              Remote freelance projects with live overlap in your time zone, and in-person meetings in Delhi NCR.
+              Remote freelance projects with written updates and milestone reviews through email and WhatsApp.
             </p>
           </div>
           <ul className="flex flex-wrap gap-3 md:justify-end">

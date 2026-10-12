@@ -26,7 +26,7 @@ export const personSchema = () => ({
   image: absoluteUrl('/opengraph-image'),
   email: `mailto:${site.email}`,
   knowsLanguage: ['English', 'Hindi'],
-  telephone: site.phone,
+
   address: {
     '@type': 'PostalAddress',
     addressLocality: site.locality,
@@ -74,7 +74,7 @@ export const professionalServiceSchema = (services = []) => ({
   image: absoluteUrl('/opengraph-image'),
   logo: absoluteUrl('/favicon.png'),
   email: site.email,
-  telephone: site.phone,
+
   founder: personRef,
   address: {
     '@type': 'PostalAddress',
@@ -86,14 +86,12 @@ export const professionalServiceSchema = (services = []) => ({
     'India', 'United States', 'United Kingdom', 'United Arab Emirates', 'Canada',
     'Australia', 'Singapore', 'Germany', 'Netherlands', 'South Africa',
   ].map((name) => ({ '@type': 'Country', name })),
-  currenciesAccepted: 'INR, USD, GBP, EUR, AED, CAD, AUD, SGD',
-  paymentAccepted: 'UPI, Bank Transfer, Wise, PayPal, Wire Transfer',
   knowsLanguage: ['English', 'Hindi'],
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'Project enquiries',
     email: site.email,
-    telephone: site.phone,
+
     url: absoluteUrl('/contact'),
     availableLanguage: ['English', 'Hindi'],
   },

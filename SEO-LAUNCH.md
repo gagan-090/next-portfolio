@@ -62,7 +62,7 @@ Owner-confirmed homepage totals are 28+ clients served and 20+ projects delivere
 
 City pages generate and cache on demand; only three examples are pre-rendered at build time. Country listings have 100 entries per page and country-wide search. Time conversion uses the recorded IANA zone and the selected date for daylight-saving handling. GeoNames record and licence attribution appear on all pages. Rebuild the data with `python3 scripts/import-cities.py cities500.zip admin1CodesASCII.txt` after downloading those files from the official GeoNames dump.
 
-The directory root and all 6,000 city pages are indexable and in the sitemap following the owner’s request. Country and paginated listing pages remain `noindex, follow` and outside the sitemap. City pages include source-linked place details, a dated meeting converter, project briefs, service-area schema and visible FAQs. Indexability does not establish that Google will accept or rank the content; continue adding useful local project detail as it becomes available. There are no claims of 6,000 local offices, local client histories or verified best-developer rankings.
+The directory root remains indexable. All 6,000 city utilities, country listings and pagination are `noindex, follow` and excluded from the sitemap under the latest SEO/AEO audit brief. They remain available to visitors with source-linked place details, written review deadline conversion and project briefs. Curated service/market pages carry the search offer; no local offices, local client histories or best-developer rankings are invented.
 
 ## October search growth update
 
@@ -73,3 +73,7 @@ Baseline from the owner’s three-month Search Console screenshot: 4 clicks, 733
 After the GitHub/Vercel deployment, resubmit the www sitemap in Search Console, inspect homepage, cost guide, logistics service and representative city URLs, and verify the Google-selected canonical. Account access is needed for submission and query analysis; no Search Console settings have been changed from this workspace.
 
 Reference: https://developers.google.com/search/docs/appearance/ai-features — Google states no special AI markup is required; eligible indexed pages, useful content, internal links and matching structured data remain relevant.
+
+## SEO/AEO audit revision — 12 October 2026
+
+See `reports/seo-aeo/2026-10-12/README.md` for all 29 audits and rewrite packs. Project communication is email and WhatsApp only. The contact form has no recruitment or call-booking offer. Analytics events are queued to dataLayer but need the owner’s real GA4/GTM setup before collection can be claimed. Confirmed numeric service prices and delivery records are still required; none were invented.

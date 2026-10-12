@@ -1,4 +1,5 @@
 import HomeView from '@/views/HomeView';
+import ScopeTable from '@/components/services/ScopeTable';
 import { blogService } from '@/lib/blogService';
 import { JsonLd, faqSchema } from '@/components/seo/JsonLd';
 import { pageMetadata, site } from '@/lib/site';
@@ -18,34 +19,34 @@ export const metadata = {
 };
 
 const homeFaqs = [
-  { q: 'How many clients and projects has Gagan Shukla served?', a: 'Gagan reports 28+ clients served and 20+ projects delivered across his development work. These are overall portfolio totals, not claims of completed work in every listed service city.' },
-  { q: 'How much development experience does Gagan Shukla have?', a: 'Gagan Shukla has 4+ years of development experience across mobile apps, websites and business software. His professional employment history is listed separately on the experience page.' },
-  { q: 'Can Gagan develop logistics and transport software?', a: 'Yes. Gagan has worked on TruckMitr and TMConnect and offers freelance logistics app, fleet management and transport software development for Indian and international businesses.' },
-  { q: 'What websites and business software has Gagan developed?', a: 'Gagan developed VRC Mobility (vrcmobility.in), a bid management system, HRMS and SaaS software. His portfolio also covers mobile apps, e-commerce and logistics products. Discuss your required features directly with him.' },
   {
-    q: 'What does Gagan Shukla build?',
-    a: 'Gagan Shukla builds Android and iOS apps (Flutter, React Native), websites and web apps (Next.js, React), SaaS products, bid management systems and business software such as CRM, ERP, HRMS and e-commerce platforms, including the backend, database and admin dashboards.',
+    "q": "What logistics software do you build?",
+    "a": "I scope driver apps, dispatch workflows and business dashboards for logistics teams. TruckMitr and TMConnect are relevant work you can review in my portfolio."
   },
   {
-    q: 'Is Gagan Shukla available for freelance projects?',
-    a: 'Yes. He takes on fixed-scope freelance projects and freelance development retainers for clients in India, the USA, UK, UAE, Europe, Canada, Australia and Singapore. Use the contact form, email gaganshuklarmg@gmail.com or message on WhatsApp at +91 63947 56798.',
+    "q": "How much development experience do you have?",
+    "a": "I have 4+ years of development experience, with 28+ clients served and 20+ projects delivered across my work. These are owner-reported portfolio totals, not promises of results for a new project."
   },
   {
-    q: 'How many production apps has Gagan Shukla shipped?',
-    a: 'He has shipped 5+ production applications, including the TruckMitr logistics app on Google Play and an HRMS & CRM app published on the Play Store and App Store.',
+    "q": "Can you also build websites and SaaS products?",
+    "a": "Yes, I offer freelance website, app, SaaS, CRM, HRMS and bid management development. My work includes VRC Mobility and the business software examples in my portfolio."
   },
   {
-    q: 'How much does it cost to build an app or website?',
-    a: 'Cost depends on scope: number of screens, user roles, integrations and platforms. After a free discovery call you receive a written scope with a fixed quote and milestone plan, so there are no surprises.',
+    "q": "Can we work without calls?",
+    "a": "Yes, I handle project enquiries and written reviews through email and WhatsApp. Send your brief through the contact form or directly by email; no call booking is required."
   },
   {
-    q: 'Can international clients hire Gagan Shukla?',
-    a: 'Yes. He keeps a daily live-overlap window for calls in the client’s time zone (for example US mornings, the UK and EU working day, or a full day for the UAE), invoices in USD, GBP, EUR or AED, and accepts Wise, PayPal and wire transfers. NDAs and full IP assignment are standard.',
+    "q": "How much will my project cost?",
+    "a": "I quote the scope after reviewing users, essential features, integrations and existing assets. The proposal separates development, recurring services and ongoing support."
   },
   {
-    q: 'Where is Gagan Shukla based?',
-    a: 'He is based in Noida, Uttar Pradesh, India, meets Delhi NCR clients in person, and works remotely with clients across time zones.',
+    "q": "Can international businesses work with you?",
+    "a": "Yes, I accept remote freelance project enquiries from India and worldwide. Scope, review deadlines, currency, payments and ownership are agreed in writing."
   },
+  {
+    "q": "Where are you based?",
+    "a": "I am based in Noida, Uttar Pradesh, India. The country pages describe markets I can serve remotely and do not claim offices or client references in every location."
+  }
 ];
 
 export default async function HomePage() {
@@ -55,6 +56,14 @@ export default async function HomePage() {
     <>
       <JsonLd data={faqSchema(homeFaqs)} />
       <HomeView latestBlogs={latestBlogs || []} faqs={homeFaqs} />
+      <section className="max-w-[1200px] mx-auto px-gutter pb-16">
+        <h2 className="font-headline-md text-2xl font-bold mb-4">Choose the scope for your first release</h2>
+        <ScopeTable headers={['Project', 'First-release focus', 'What changes the quote']} rows={[
+          ['Logistics app', 'One driver-to-office workflow', 'Offline actions, tracking and integrations'],
+          ['Website', 'Clear services and working enquiry routes', 'Content, CMS and existing code'],
+          ['SaaS or business software', 'One customer or staff workflow', 'Roles, tenant access, billing and migration'],
+        ]} caption="Quotes follow a written scope review. Development, operating services and support are separate decisions." />
+      </section>
     </>
   );
 }

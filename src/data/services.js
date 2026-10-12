@@ -20,351 +20,1404 @@ export const engagementModels = [
 ];
 
 export const processSteps = [
-  { step: '01', title: 'Discovery Call', desc: 'A free 30-minute call to understand your business, users and goals. You get a written scope within 48 hours.' },
+  { step: '01', title: 'Written project brief', desc: 'Send your workflow by email or WhatsApp. I clarify scope, dependencies and acceptance checks in writing; no call required.' },
   { step: '02', title: 'Plan & Design', desc: 'User flows, database schema and clickable UI screens, approved by you before any code is written.' },
-  { step: '03', title: 'Build in Sprints', desc: 'Weekly demos on a live staging link. You see progress every week, not just at the end.' },
+  { step: '03', title: 'Build in Sprints', desc: 'Reviewable releases on a staging link. Written updates and review deadlines are agreed in the proposal.' },
   { step: '04', title: 'Launch', desc: 'Play Store / App Store submission, domain, hosting, SSL and analytics, handled end to end.' },
-  { step: '05', title: 'Support & Scale', desc: 'Post-launch bug-fix warranty, monitoring, and a roadmap for the next version.' },
+  { step: '05', title: 'Support & Scale', desc: 'Support, warranty, monitoring and future releases are scoped explicitly in the contract.' },
 ];
 
 export const servicesData = [
   {
-    slug: 'logistics-app-development',
-    name: 'Logistics App & Transport Software Development',
-    shortName: 'Logistics & Fleet Software', icon: 'local_shipping',
-    headline: 'Software for the drivers, field teams and operators who keep your business moving.',
-    metaTitle: 'Freelance Logistics App & Fleet Software Developer',
-    metaDescription: 'Hire Gagan Shukla for logistics apps, fleet and transport software. TruckMitr and TMConnect experience, offline workflows and mobile apps. Clients worldwide.',
-    keywords: ['logistics app developer', 'freelance logistics software developer', 'fleet management software development', 'transport management system developer', 'truck booking app development', 'logistics CRM development'],
-    intro: 'I build logistics apps and business software for transport operators, fleet businesses and field teams. My relevant work includes the TruckMitr logistics app and TMConnect. With 4+ years of development experience, I can help define a practical first release for your operations and deliver the mobile, web and backend work agreed in scope.',
-    problems: [
-      'Drivers and field staff work in areas where mobile connectivity is unreliable.',
-      'Jobs, driver records and follow-ups are split across calls, messages and spreadsheets.',
-      'Your operations team needs a shared view while drivers need a simple mobile workflow.',
-      'A generic CRM does not reflect the roles and tasks in your transport business.',
+    "slug": "logistics-app-development",
+    "name": "Freelance Logistics App Developer",
+    "shortName": "Logistics & Fleet Software",
+    "icon": "local_shipping",
+    "headline": "Freelance project delivery, with scope and milestones agreed in writing.",
+    "metaTitle": "Freelance Logistics App Developer | Gagan Shukla",
+    "metaDescription": "I build logistics & fleet software for business workflows. 4+ years of experience. Send your scope by email or WhatsApp for a written quote.",
+    "keywords": [
+      "logistics app developer",
+      "freelance logistics software developer",
+      "fleet management software development",
+      "transport management system developer",
+      "truck booking app development",
+      "logistics CRM development"
     ],
-    deliverables: [
-      { icon: 'smartphone', title: 'Driver & field-team apps', desc: 'Android and iOS workflows for the tasks your drivers or agents need to complete.' },
-      { icon: 'cloud_off', title: 'Offline workflows', desc: 'Plan local storage, retries and synchronisation for unreliable networks.' },
-      { icon: 'location_on', title: 'Location & tracking', desc: 'Scope GPS updates, map displays and location permissions around operational needs.' },
-      { icon: 'dashboard', title: 'Operations dashboard', desc: 'Web views of jobs, assignments, records and status for your office team.' },
-      { icon: 'groups', title: 'Logistics CRM', desc: 'Customer, transporter and agent workflows with agreed roles and permissions.' },
-      { icon: 'integration_instructions', title: 'APIs & integrations', desc: 'Assess existing APIs, notification providers and business systems before quoting.' },
+    "intro": "I provide freelance logistics app development for businesses that need driver assignments, trip status, proof of delivery and dispatch dashboards. My relevant work includes TruckMitr and TMConnect. I work from Noida, India, with 4+ years of development experience. Send your requirements by email or WhatsApp so I can assess the scope, dependencies and delivery milestones.",
+    "problems": [
+      "Drivers and field staff work in areas where mobile connectivity is unreliable.",
+      "Jobs, driver records and follow-ups are split across calls, messages and spreadsheets.",
+      "Your operations team needs a shared view while drivers need a simple mobile workflow.",
+      "A generic CRM does not reflect the roles and tasks in your transport business."
     ],
-    techStack: ['Flutter', 'React Native', 'Next.js', 'Node.js', 'PostgreSQL', 'SQLite', 'WebSockets'],
-    relatedProjects: ['truckmitr', 'TMConnact', 'hrms-crm'],
-    relatedGuides: ['logistics-app-development-requirements', 'choose-best-freelance-developer'],
-    faqs: [
-      { q: 'Do you have logistics development experience?', a: 'Yes. Gagan Shukla has worked on TruckMitr and TMConnect. Their portfolio pages describe the relevant mobile and logistics work.' },
-      { q: 'Can you build a fleet or transport management system?', a: 'Yes. We first define the vehicles, drivers, jobs, user roles and reports you need. Tracking, billing and integrations are scoped for your particular operation.' },
-      { q: 'Can a driver app work without a reliable internet connection?', a: 'Many tasks can be designed for offline use with local storage and later synchronisation. Live location and other network-dependent features need explicit offline behaviour and retry rules.' },
-      { q: 'Do you build truck booking or delivery apps?', a: 'I can develop the agreed booking, assignment and delivery workflows, including mobile and admin views. We define the business rules and integrations before development.' },
-      { q: 'Can an international logistics business hire you?', a: 'Yes. I am based in India and available for remote freelance projects worldwide. We agree on communication hours, scope and milestones before starting.' },
+    "deliverables": [
+      {
+        "icon": "smartphone",
+        "title": "Driver & field-team apps",
+        "desc": "Android and iOS workflows for the tasks your drivers or agents need to complete."
+      },
+      {
+        "icon": "cloud_off",
+        "title": "Offline workflows",
+        "desc": "Plan local storage, retries and synchronisation for unreliable networks."
+      },
+      {
+        "icon": "location_on",
+        "title": "Location & tracking",
+        "desc": "Scope GPS updates, map displays and location permissions around operational needs."
+      },
+      {
+        "icon": "dashboard",
+        "title": "Operations dashboard",
+        "desc": "Web views of jobs, assignments, records and status for your office team."
+      },
+      {
+        "icon": "groups",
+        "title": "Logistics CRM",
+        "desc": "Customer, transporter and agent workflows with agreed roles and permissions."
+      },
+      {
+        "icon": "integration_instructions",
+        "title": "APIs & integrations",
+        "desc": "Assess existing APIs, notification providers and business systems before quoting."
+      }
     ],
+    "techStack": [
+      "Flutter",
+      "React Native",
+      "Next.js",
+      "Node.js",
+      "PostgreSQL",
+      "SQLite",
+      "WebSockets"
+    ],
+    "relatedProjects": [
+      "truckmitr",
+      "TMConnact",
+      "hrms-crm"
+    ],
+    "relatedGuides": [
+      "logistics-app-development-requirements",
+      "choose-best-freelance-developer",
+      "freelance-software-development-cost",
+      "plan-custom-software-project"
+    ],
+    "faqs": [
+      {
+        "q": "What does your logistics & fleet software service include?",
+        "a": "I scope driver assignments, trip status, proof of delivery and dispatch dashboards around your business workflow. The proposal lists the included features, integrations, testing and handover deliverables."
+      },
+      {
+        "q": "How much does logistics & fleet software cost?",
+        "a": "The price depends on the agreed scope; I have not published a universal starting price. Send the users, required features, integrations and existing assets for a written estimate that separates development and recurring costs."
+      },
+      {
+        "q": "How long will the first release take?",
+        "a": "I estimate delivery after reviewing the workflow and dependencies. The milestone plan identifies required approvals, integration access and what you can test at each stage."
+      },
+      {
+        "q": "Can we work entirely by email and WhatsApp?",
+        "a": "Yes, I handle freelance project enquiries and written project updates through email and WhatsApp. Send a project brief; no call booking is required."
+      },
+      {
+        "q": "What relevant work can I review?",
+        "a": "My relevant portfolio includes TruckMitr and TMConnect. Review the case studies and ask about my role and the scope closest to your project; portfolio totals are not results guaranteed for your business."
+      },
+      {
+        "q": "What will I own when the project is delivered?",
+        "a": "Source-code ownership, repository access, deployment instructions and support terms are agreed in the written contract. External services, existing licences and third-party intellectual property need their own terms."
+      },
+      {
+        "q": "Can you improve an existing product?",
+        "a": "Yes, I can assess a defined improvement to an existing product. Share the current stack, repository access arrangements and the problem to reproduce before I quote the work."
+      }
+    ],
+    "buyerSections": [
+      {
+        "heading": "How I scope your logistics & fleet software project",
+        "text": "I begin with one complete trip: assignment, pickup, delivery and office confirmation. I ask you to show the exception cases, including reassignment, poor connectivity and missing delivery evidence. We agree which actions work offline and how the office distinguishes a stale position from a current one."
+      },
+      {
+        "heading": "What determines price and delivery",
+        "text": "I quote the agreed scope after reviewing the users, essential features, integrations and existing code or data. The written proposal separates development from recurring services and lists milestones, acceptance checks and handover terms. I do not publish an unconfirmed starting price or promise a launch date before that review."
+      }
+    ],
+    "comparison": {
+      "headers": [
+        "Scope option",
+        "What we define",
+        "Quote depends on"
+      ],
+      "rows": [
+        [
+          "Driver workflow",
+          "Assigned jobs, status updates and delivery evidence",
+          "Offline queue, permissions and retry behaviour"
+        ],
+        [
+          "Dispatcher dashboard",
+          "Assignment rules, driver visibility and exception reports",
+          "Map provider, GPS source and notification events"
+        ],
+        [
+          "Connected fleet platform",
+          "Driver app, operations console and integrations",
+          "Existing TMS APIs, data migration and tracking requirements"
+        ]
+      ],
+      "caption": "Scope comparison, not published package prices. Request a written estimate for your requirements."
+    },
+    "cta": "Send your logistics brief"
   },
   {
-    slug: 'bid-management-software',
-    name: 'Bid & Tender Management Software Development',
-    shortName: 'Bid & Tender Management', icon: 'description',
-    headline: 'Bring your bidding workflow into one business application.',
-    metaTitle: 'Custom Bid & Tender Management Software Developer',
-    metaDescription: 'Hire Gagan Shukla to develop custom bid and tender management software. Prior bid management system experience. Available for India and worldwide projects.',
-    keywords: ['bid management software development', 'tender management system developer', 'procurement software developer', 'custom bidding software'],
-    intro: 'I have developed a bid management system. For your project, I can build software around the way your team identifies opportunities, prepares bids and coordinates approvals. The features below are options for your scope, agreed after discovery.',
-    problems: ['Bid documents and deadlines are spread across spreadsheets and inboxes.', 'Your approval process needs clear owners and visibility.', 'Generic tools do not fit your procurement workflow.'],
-    deliverables: [
-      { icon: 'dashboard', title: 'Opportunity workspace', desc: 'A shared view of tenders, bids, owners and current status.' },
-      { icon: 'folder', title: 'Document workflows', desc: 'Organise supporting documents and submission requirements.' },
-      { icon: 'event', title: 'Deadline tracking', desc: 'Track due dates and agree on reminder channels during discovery.' },
-      { icon: 'verified_user', title: 'Roles & approvals', desc: 'Permissions and review stages designed around your team.' },
-      { icon: 'monitoring', title: 'Reporting', desc: 'Choose the bid status and outcome reports your business needs.' },
-      { icon: 'integration_instructions', title: 'Integration planning', desc: 'Scope connections to your CRM, ERP or existing data sources.' },
+    "slug": "bid-management-software",
+    "name": "Custom Bid Management Developer",
+    "shortName": "Bid & Tender Management",
+    "icon": "description",
+    "headline": "Freelance project delivery, with scope and milestones agreed in writing.",
+    "metaTitle": "Custom Bid Management Developer | Gagan Shukla",
+    "metaDescription": "I build bid & tender management for business workflows. 4+ years of experience. Send your scope by email or WhatsApp for a written quote.",
+    "keywords": [
+      "bid management software development",
+      "tender management system developer",
+      "procurement software developer",
+      "custom bidding software"
     ],
-    techStack: ['React', 'Next.js', 'Node.js', 'PostgreSQL'],
-    relatedProjects: ['hrms-crm'],
-    faqs: [
-      { q: 'Have you built a bid management system before?', a: 'Yes. Gagan Shukla has developed a bid management system. Contact him to discuss your workflow and the relevant experience.' },
-      { q: 'Can the system match our tender process?', a: 'Yes. We define the user roles, review steps, required documents and reporting in discovery, then build the agreed workflow.' },
-      { q: 'Can you integrate with our existing ERP or CRM?', a: 'Integration depends on the APIs and data access available in your existing software. I assess those requirements before quoting.' },
-      { q: 'Can clients outside India hire you?', a: 'Yes. I accept remote freelance projects from any country and agree on communication hours, milestones and payment terms before work starts.' },
+    "intro": "I provide custom bid management software development for businesses that need tender records, document checklists, submission deadlines and approval workflows. My relevant work includes the bid management system. I work from Noida, India, with 4+ years of development experience. Send your requirements by email or WhatsApp so I can assess the scope, dependencies and delivery milestones.",
+    "problems": [
+      "Bid documents and deadlines are spread across spreadsheets and inboxes.",
+      "Your approval process needs clear owners and visibility.",
+      "Generic tools do not fit your procurement workflow."
     ],
+    "deliverables": [
+      {
+        "icon": "dashboard",
+        "title": "Opportunity workspace",
+        "desc": "A shared view of tenders, bids, owners and current status."
+      },
+      {
+        "icon": "folder",
+        "title": "Document workflows",
+        "desc": "Organise supporting documents and submission requirements."
+      },
+      {
+        "icon": "event",
+        "title": "Deadline tracking",
+        "desc": "Track due dates and agree on reminder channels during discovery."
+      },
+      {
+        "icon": "verified_user",
+        "title": "Roles & approvals",
+        "desc": "Permissions and review stages designed around your team."
+      },
+      {
+        "icon": "monitoring",
+        "title": "Reporting",
+        "desc": "Choose the bid status and outcome reports your business needs."
+      },
+      {
+        "icon": "integration_instructions",
+        "title": "Integration planning",
+        "desc": "Scope connections to your CRM, ERP or existing data sources."
+      }
+    ],
+    "techStack": [
+      "React",
+      "Next.js",
+      "Node.js",
+      "PostgreSQL"
+    ],
+    "relatedProjects": [
+      "hrms-crm"
+    ],
+    "faqs": [
+      {
+        "q": "What does your bid & tender management service include?",
+        "a": "I scope tender records, document checklists, submission deadlines and approval workflows around your business workflow. The proposal lists the included features, integrations, testing and handover deliverables."
+      },
+      {
+        "q": "How much does bid & tender management cost?",
+        "a": "The price depends on the agreed scope; I have not published a universal starting price. Send the users, required features, integrations and existing assets for a written estimate that separates development and recurring costs."
+      },
+      {
+        "q": "How long will the first release take?",
+        "a": "I estimate delivery after reviewing the workflow and dependencies. The milestone plan identifies required approvals, integration access and what you can test at each stage."
+      },
+      {
+        "q": "Can we work entirely by email and WhatsApp?",
+        "a": "Yes, I handle freelance project enquiries and written project updates through email and WhatsApp. Send a project brief; no call booking is required."
+      },
+      {
+        "q": "What relevant work can I review?",
+        "a": "My relevant portfolio includes the bid management system. Review the case studies and ask about my role and the scope closest to your project; portfolio totals are not results guaranteed for your business."
+      },
+      {
+        "q": "What will I own when the project is delivered?",
+        "a": "Source-code ownership, repository access, deployment instructions and support terms are agreed in the written contract. External services, existing licences and third-party intellectual property need their own terms."
+      },
+      {
+        "q": "Can you improve an existing product?",
+        "a": "Yes, I can assess a defined improvement to an existing product. Share the current stack, repository access arrangements and the problem to reproduce before I quote the work."
+      }
+    ],
+    "buyerSections": [
+      {
+        "heading": "How I scope your bid & tender management project",
+        "text": "I map a tender from discovery to submission before designing the dashboard. I need the actual document checklist, approval owners and rules for deadline changes. The first release should make incomplete submissions visible, rather than adding an automatic tender feed before its access and reliability are understood."
+      },
+      {
+        "heading": "What determines price and delivery",
+        "text": "I quote the agreed scope after reviewing the users, essential features, integrations and existing code or data. The written proposal separates development from recurring services and lists milestones, acceptance checks and handover terms. I do not publish an unconfirmed starting price or promise a launch date before that review."
+      }
+    ],
+    "comparison": {
+      "headers": [
+        "Scope option",
+        "What we define",
+        "Quote depends on"
+      ],
+      "rows": [
+        [
+          "Tender register",
+          "Opportunities, owners, deadlines and reminders",
+          "Existing spreadsheet fields and import rules"
+        ],
+        [
+          "Approval workflow",
+          "Submission checks, permissions and audit history",
+          "Who can approve, revise or withdraw a bid"
+        ],
+        [
+          "Connected bid system",
+          "Document storage, reporting and integrations",
+          "Retention rules and the systems providing tender data"
+        ]
+      ],
+      "caption": "Scope comparison, not published package prices. Request a written estimate for your requirements."
+    },
+    "cta": "Send your tender workflow",
+    "relatedGuides": [
+      "freelance-software-development-cost",
+      "plan-custom-software-project"
+    ]
   },
   {
-    slug: 'mobile-app-development',
-    name: 'Mobile App Development',
-    shortName: 'Mobile Apps',
-    icon: 'smartphone',
-    headline: 'Android & iOS apps that ship to the store, and stay fast.',
-    metaTitle: 'Mobile App Development Services — Hire Flutter & React Native Developer',
-    metaDescription:
-      'Hire Gagan Shukla for Android & iOS app development with Flutter and React Native. Production apps live on the Play Store, offline-first sync, payments, maps and push notifications.',
-    relatedGuides: ['choose-best-freelance-developer', 'logistics-app-development-requirements'],
-    keywords: ['Mobile App Development Services', 'Hire Flutter Developer', 'Hire React Native Developer', 'Android App Developer India', 'iOS App Developer', 'Cross Platform App Development'],
-    intro:
-      'One codebase, two platforms. I build cross-platform apps in Flutter and React Native, from the first wireframe to the Play Store and App Store listing, with the backend, admin panel and analytics included.',
-    problems: [
-      'Your app idea needs to launch on Android and iOS without paying for two separate teams.',
-      'Your current app is slow, crashes, or breaks when users lose network connection.',
-      'You need real features (payments, live tracking, push notifications), not just screens.',
+    "slug": "mobile-app-development",
+    "name": "Freelance Flutter App Developer",
+    "shortName": "Mobile Apps",
+    "icon": "smartphone",
+    "headline": "Freelance project delivery, with scope and milestones agreed in writing.",
+    "metaTitle": "Freelance Flutter App Developer | Gagan Shukla",
+    "metaDescription": "I build mobile apps for business workflows. 4+ years of experience. Send your scope by email or WhatsApp for a written quote.",
+    "relatedGuides": [
+      "choose-best-freelance-developer",
+      "logistics-app-development-requirements",
+      "freelance-software-development-cost",
+      "plan-custom-software-project"
     ],
-    deliverables: [
-      { icon: 'devices', title: 'Android + iOS from one codebase', desc: 'Flutter or React Native, chosen based on your team and product needs.' },
-      { icon: 'cloud_off', title: 'Offline-first sync', desc: 'Local SQLite storage that syncs to the cloud when the network returns, already proven in logistics apps.' },
-      { icon: 'payments', title: 'Payments', desc: 'Razorpay, Stripe and UPI checkout flows with server-side verification.' },
-      { icon: 'location_on', title: 'Maps & live tracking', desc: 'Google Maps SDK, live GPS tracking, geofencing and route display.' },
-      { icon: 'notifications_active', title: 'Push notifications', desc: 'Firebase Cloud Messaging with role-based and scheduled notifications.' },
-      { icon: 'rocket_launch', title: 'Store launch', desc: 'Play Store & App Store submission, listing assets and release management.' },
+    "keywords": [
+      "Mobile App Development Services",
+      "Hire Flutter Developer",
+      "Hire React Native Developer",
+      "Android App Developer India",
+      "iOS App Developer",
+      "Cross Platform App Development"
     ],
-    techStack: ['Flutter', 'Dart', 'React Native', 'Redux Toolkit', 'Riverpod', 'Firebase', 'Supabase', 'Node.js', 'SQLite'],
-    relatedProjects: ['truckmitr', 'aura', 'TMConnact'],
-    faqs: [
-      { q: 'How do I choose the best app developer for my business?', a: 'Review shipped apps, relevant domain experience, backend capability, testing and handover. Gagan Shukla has 4+ years of development experience and portfolio work in logistics, HRMS and e-commerce; compare that evidence against your requirements.' },
-      { q: 'Flutter or React Native, which should I choose?', a: 'Both build Android and iOS from one codebase. Flutter gives the most consistent, animation-heavy UI; React Native fits best if your team already uses React on the web. I have shipped production apps in both and will recommend one based on your product, not my preference.' },
-      { q: 'How long does it take to build a mobile app?', a: 'A focused MVP usually takes 6–10 weeks. A full product with admin panel, payments and multiple user roles typically takes 3–5 months. You get a milestone plan with dates after the discovery call.' },
-      { q: 'Will you publish the app to the Play Store and App Store?', a: 'Yes. I handle builds, signing, store listings and the review process, and can publish under your own developer accounts so you keep full ownership.' },
-      { q: 'Do I own the source code?', a: 'Yes. You receive the full source code, repository access and all credentials. Nothing is locked to me.' },
+    "intro": "I provide freelance Flutter app development for businesses that need Android and iOS workflows, account access, notifications and backend integration. My relevant work includes TruckMitr, TMConnect and HRMS/CRM. I work from Noida, India, with 4+ years of development experience. Send your requirements by email or WhatsApp so I can assess the scope, dependencies and delivery milestones.",
+    "problems": [
+      "Your app idea needs to launch on Android and iOS without paying for two separate teams.",
+      "Your current app is slow, crashes, or breaks when users lose network connection.",
+      "You need real features (payments, live tracking, push notifications), not just screens."
     ],
+    "deliverables": [
+      {
+        "icon": "devices",
+        "title": "Android + iOS from one codebase",
+        "desc": "Flutter or React Native, chosen based on your team and product needs."
+      },
+      {
+        "icon": "cloud_off",
+        "title": "Offline-first sync",
+        "desc": "Local SQLite storage that syncs to the cloud when the network returns, already proven in logistics apps."
+      },
+      {
+        "icon": "payments",
+        "title": "Payments",
+        "desc": "Razorpay, Stripe and UPI checkout flows with server-side verification."
+      },
+      {
+        "icon": "location_on",
+        "title": "Maps & live tracking",
+        "desc": "Google Maps SDK, live GPS tracking, geofencing and route display."
+      },
+      {
+        "icon": "notifications_active",
+        "title": "Push notifications",
+        "desc": "Firebase Cloud Messaging with role-based and scheduled notifications."
+      },
+      {
+        "icon": "rocket_launch",
+        "title": "Store launch",
+        "desc": "Play Store & App Store submission, listing assets and release management."
+      }
+    ],
+    "techStack": [
+      "Flutter",
+      "Dart",
+      "React Native",
+      "Redux Toolkit",
+      "Riverpod",
+      "Firebase",
+      "Supabase",
+      "Node.js",
+      "SQLite"
+    ],
+    "relatedProjects": [
+      "truckmitr",
+      "aura",
+      "TMConnact"
+    ],
+    "faqs": [
+      {
+        "q": "What does your mobile apps service include?",
+        "a": "I scope Android and iOS workflows, account access, notifications and backend integration around your business workflow. The proposal lists the included features, integrations, testing and handover deliverables."
+      },
+      {
+        "q": "How much does mobile apps cost?",
+        "a": "The price depends on the agreed scope; I have not published a universal starting price. Send the users, required features, integrations and existing assets for a written estimate that separates development and recurring costs."
+      },
+      {
+        "q": "How long will the first release take?",
+        "a": "I estimate delivery after reviewing the workflow and dependencies. The milestone plan identifies required approvals, integration access and what you can test at each stage."
+      },
+      {
+        "q": "Can we work entirely by email and WhatsApp?",
+        "a": "Yes, I handle freelance project enquiries and written project updates through email and WhatsApp. Send a project brief; no call booking is required."
+      },
+      {
+        "q": "What relevant work can I review?",
+        "a": "My relevant portfolio includes TruckMitr, TMConnect and HRMS/CRM. Review the case studies and ask about my role and the scope closest to your project; portfolio totals are not results guaranteed for your business."
+      },
+      {
+        "q": "What will I own when the project is delivered?",
+        "a": "Source-code ownership, repository access, deployment instructions and support terms are agreed in the written contract. External services, existing licences and third-party intellectual property need their own terms."
+      },
+      {
+        "q": "Can you improve an existing product?",
+        "a": "Yes, I can assess a defined improvement to an existing product. Share the current stack, repository access arrangements and the problem to reproduce before I quote the work."
+      }
+    ],
+    "buyerSections": [
+      {
+        "heading": "How I scope your mobile apps project",
+        "text": "I choose Flutter, React Native or native code after reviewing the required device features and the team that will maintain the app. I test the core journey on actual target devices, including denied permissions and poor connectivity. Store review and external API availability are dependencies, so I separate them from development milestones."
+      },
+      {
+        "heading": "What determines price and delivery",
+        "text": "I quote the agreed scope after reviewing the users, essential features, integrations and existing code or data. The written proposal separates development from recurring services and lists milestones, acceptance checks and handover terms. I do not publish an unconfirmed starting price or promise a launch date before that review."
+      }
+    ],
+    "comparison": {
+      "headers": [
+        "Scope option",
+        "What we define",
+        "Quote depends on"
+      ],
+      "rows": [
+        [
+          "First mobile release",
+          "One user journey, authentication and essential screens",
+          "Android, iOS, offline needs and API availability"
+        ],
+        [
+          "Business app",
+          "Multiple roles, notifications and admin tools",
+          "Permissions, device testing and backend ownership"
+        ],
+        [
+          "Existing app improvement",
+          "A defined feature, bug fix or release update",
+          "Repository access, dependencies and reproduction steps"
+        ]
+      ],
+      "caption": "Scope comparison, not published package prices. Request a written estimate for your requirements."
+    },
+    "cta": "Send your app brief"
   },
   {
-    slug: 'web-development',
-    name: 'Website & Web App Development',
-    shortName: 'Websites & Web Apps',
-    icon: 'language',
-    headline: 'Fast, SEO-ready websites and web apps built with Next.js.',
-    metaTitle: 'Website & Web App Development Services — Next.js & React Developer',
-    metaDescription:
-      'Custom website and web application development with Next.js, React and Node.js. SEO-optimised, fast-loading business websites, dashboards, portals and SaaS frontends.',
-    relatedGuides: ['choose-best-freelance-developer', 'plan-custom-software-project'],
-    keywords: ['Website Development Services', 'Next.js Developer', 'React Developer India', 'Web Application Development', 'Business Website Development', 'Freelance Web Developer India'],
-    intro:
-      'Your website is your best salesperson, so it should load fast, rank on Google and convert visitors. I build marketing sites, customer portals and full web applications on Next.js with server rendering, structured data and Core Web Vitals in mind from day one.',
-    problems: [
-      'Your website does not show up on Google, or loads too slowly on mobile.',
-      'You need a customer portal, booking system or dashboard, not just a brochure site.',
-      'Your team is stuck editing content through a developer for every change.',
+    "slug": "web-development",
+    "name": "Freelance Next.js Web Developer",
+    "shortName": "Websites & Web Apps",
+    "icon": "language",
+    "headline": "Freelance project delivery, with scope and milestones agreed in writing.",
+    "metaTitle": "Freelance Next.js Web Developer | Gagan Shukla",
+    "metaDescription": "I build websites & web apps for business workflows. 4+ years of experience. Send your scope by email or WhatsApp for a written quote.",
+    "relatedGuides": [
+      "choose-best-freelance-developer",
+      "plan-custom-software-project",
+      "freelance-software-development-cost"
     ],
-    deliverables: [
-      { icon: 'speed', title: 'Core Web Vitals optimised', desc: 'Server rendering, optimised images and fonts for top Lighthouse scores.' },
-      { icon: 'travel_explore', title: 'Technical SEO built in', desc: 'Metadata, sitemaps, JSON-LD schema and clean URLs on every page.' },
-      { icon: 'dashboard', title: 'Dashboards & portals', desc: 'Role-based admin panels, customer portals and internal tools.' },
-      { icon: 'edit_note', title: 'Editable content', desc: 'CMS or Supabase-backed content so your team can update pages without code.' },
-      { icon: 'api', title: 'APIs & integrations', desc: 'REST APIs, payment gateways, email (Resend), CRMs and third-party services.' },
-      { icon: 'cloud_upload', title: 'Deployment & hosting', desc: 'Vercel or AWS deployment, custom domain, SSL, CI/CD and analytics.' },
+    "keywords": [
+      "Website Development Services",
+      "Next.js Developer",
+      "React Developer India",
+      "Web Application Development",
+      "Business Website Development",
+      "Freelance Web Developer India"
     ],
-    techStack: ['Next.js', 'React.js', 'Tailwind CSS', 'Node.js', 'Express.js', 'PostgreSQL', 'Supabase', 'Vercel', 'AWS'],
-    relatedProjects: ['hashkart', 'hrms-crm'],
-    faqs: [
-      { q: 'How do I choose the best web developer for my project?', a: 'Check real websites, accessible mobile layouts, performance, content editing, enquiry flows and ownership of the code. Gagan developed VRC Mobility and offers website and web application development for clients in India and abroad.' },
-      { q: 'Why Next.js instead of WordPress or a website builder?', a: 'Next.js sites are faster, more secure and fully custom. They score better on Core Web Vitals, which Google uses as a ranking signal, and they can grow from a marketing site into a full web app without a rebuild.' },
-      { q: 'Will my website be SEO-friendly?', a: 'Yes. Every page ships with server-rendered HTML, unique titles and descriptions, canonical URLs, an XML sitemap, Open Graph tags and schema.org structured data.' },
-      { q: 'Can you redesign or migrate my existing website?', a: 'Yes. I can migrate React, WordPress or static sites to Next.js while keeping your URLs (with proper 301 redirects) so you do not lose existing Google rankings.' },
-      { q: 'Do you provide hosting and maintenance?', a: 'I set up hosting on Vercel or AWS under your account and offer monthly maintenance retainers for updates, security patches and new features.' },
+    "intro": "I provide freelance Next.js web development for businesses that need service websites, enquiry journeys, account dashboards and web applications. My relevant work includes VRC Mobility. I work from Noida, India, with 4+ years of development experience. Send your requirements by email or WhatsApp so I can assess the scope, dependencies and delivery milestones.",
+    "problems": [
+      "Your website does not show up on Google, or loads too slowly on mobile.",
+      "You need a customer portal, booking system or dashboard, not just a brochure site.",
+      "Your team is stuck editing content through a developer for every change."
     ],
+    "deliverables": [
+      {
+        "icon": "speed",
+        "title": "Core Web Vitals optimised",
+        "desc": "Server rendering, optimised images and fonts for top Lighthouse scores."
+      },
+      {
+        "icon": "travel_explore",
+        "title": "Technical SEO built in",
+        "desc": "Metadata, sitemaps, JSON-LD schema and clean URLs on every page."
+      },
+      {
+        "icon": "dashboard",
+        "title": "Dashboards & portals",
+        "desc": "Role-based admin panels, customer portals and internal tools."
+      },
+      {
+        "icon": "edit_note",
+        "title": "Editable content",
+        "desc": "CMS or Supabase-backed content so your team can update pages without code."
+      },
+      {
+        "icon": "api",
+        "title": "APIs & integrations",
+        "desc": "REST APIs, payment gateways, email (Resend), CRMs and third-party services."
+      },
+      {
+        "icon": "cloud_upload",
+        "title": "Deployment & hosting",
+        "desc": "Vercel or AWS deployment, custom domain, SSL, CI/CD and analytics."
+      }
+    ],
+    "techStack": [
+      "Next.js",
+      "React.js",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "Supabase",
+      "Vercel",
+      "AWS"
+    ],
+    "relatedProjects": [
+      "hashkart",
+      "hrms-crm"
+    ],
+    "faqs": [
+      {
+        "q": "What does your websites & web apps service include?",
+        "a": "I scope service websites, enquiry journeys, account dashboards and web applications around your business workflow. The proposal lists the included features, integrations, testing and handover deliverables."
+      },
+      {
+        "q": "How much does websites & web apps cost?",
+        "a": "The price depends on the agreed scope; I have not published a universal starting price. Send the users, required features, integrations and existing assets for a written estimate that separates development and recurring costs."
+      },
+      {
+        "q": "How long will the first release take?",
+        "a": "I estimate delivery after reviewing the workflow and dependencies. The milestone plan identifies required approvals, integration access and what you can test at each stage."
+      },
+      {
+        "q": "Can we work entirely by email and WhatsApp?",
+        "a": "Yes, I handle freelance project enquiries and written project updates through email and WhatsApp. Send a project brief; no call booking is required."
+      },
+      {
+        "q": "What relevant work can I review?",
+        "a": "My relevant portfolio includes VRC Mobility. Review the case studies and ask about my role and the scope closest to your project; portfolio totals are not results guaranteed for your business."
+      },
+      {
+        "q": "What will I own when the project is delivered?",
+        "a": "Source-code ownership, repository access, deployment instructions and support terms are agreed in the written contract. External services, existing licences and third-party intellectual property need their own terms."
+      },
+      {
+        "q": "Can you improve an existing product?",
+        "a": "Yes, I can assess a defined improvement to an existing product. Share the current stack, repository access arrangements and the problem to reproduce before I quote the work."
+      }
+    ],
+    "buyerSections": [
+      {
+        "heading": "How I scope your websites & web apps project",
+        "text": "I start with the enquiry or business action the website needs to support. For a service website, I connect useful pages to relevant evidence and a working contact route. For a web application, I define permissions and error states before adding screens. I check rendered metadata and canonical URLs rather than relying on keyword counts."
+      },
+      {
+        "heading": "What determines price and delivery",
+        "text": "I quote the agreed scope after reviewing the users, essential features, integrations and existing code or data. The written proposal separates development from recurring services and lists milestones, acceptance checks and handover terms. I do not publish an unconfirmed starting price or promise a launch date before that review."
+      }
+    ],
+    "comparison": {
+      "headers": [
+        "Scope option",
+        "What we define",
+        "Quote depends on"
+      ],
+      "rows": [
+        [
+          "Lead generation website",
+          "Service pages, clear contact routes and editable content",
+          "Copy, assets, CMS needs and enquiry routing"
+        ],
+        [
+          "Business web app",
+          "Roles, dashboards and operational workflows",
+          "Data model, integrations and permissions"
+        ],
+        [
+          "Website improvement",
+          "A bounded performance, accessibility or SEO task",
+          "Current code, crawl evidence and acceptance checks"
+        ]
+      ],
+      "caption": "Scope comparison, not published package prices. Request a written estimate for your requirements."
+    },
+    "cta": "Send your website brief"
   },
   {
-    slug: 'crm-development',
-    name: 'Custom CRM Development',
-    shortName: 'CRM Systems',
-    icon: 'support_agent',
-    headline: 'A CRM built around how your sales team actually works.',
-    metaTitle: 'Custom CRM Software Development — Web & Mobile CRM Developer',
-    metaDescription:
-      'Custom CRM development for sales teams, telecallers and field agents. Lead management, pipelines, follow-ups, role-based dashboards and mobile CRM apps built by Gagan Shukla.',
-    keywords: ['Custom CRM Development', 'CRM Software Development India', 'Mobile CRM App', 'Lead Management Software', 'Sales CRM Developer', 'Telecaller CRM App'],
-    intro:
-      'Off-the-shelf CRMs charge per seat and force your process into their template. A custom CRM tracks exactly what your business needs (leads, calls, site visits, quotations, follow-ups) on web and mobile, with no per-user licence fees.',
-    problems: [
-      'Leads are scattered across WhatsApp, Excel sheets and notebooks, and follow-ups get missed.',
-      'Per-user pricing on Salesforce, Zoho or HubSpot is growing faster than your team.',
-      'Field agents and telecallers need a simple mobile app, not a complex desktop tool.',
+    "slug": "crm-development",
+    "name": "Custom CRM Developer for Field Sales",
+    "shortName": "CRM Systems",
+    "icon": "support_agent",
+    "headline": "Freelance project delivery, with scope and milestones agreed in writing.",
+    "metaTitle": "Custom CRM Developer for Field Sales | Gagan Shukla",
+    "metaDescription": "I build crm systems for business workflows. 4+ years of experience. Send your scope by email or WhatsApp for a written quote.",
+    "keywords": [
+      "Custom CRM Development",
+      "CRM Software Development India",
+      "Mobile CRM App",
+      "Lead Management Software",
+      "Sales CRM Developer",
+      "Telecaller CRM App"
     ],
-    deliverables: [
-      { icon: 'filter_alt', title: 'Lead & pipeline management', desc: 'Capture leads from forms, ads and calls; move them through custom stages.' },
-      { icon: 'call', title: 'Telecaller & field-agent apps', desc: 'Mobile apps with call logging, visit check-ins and daily targets.' },
-      { icon: 'manage_accounts', title: 'Role-based access', desc: 'Admin, manager and agent roles with row-level data security.' },
-      { icon: 'alarm', title: 'Follow-up reminders', desc: 'Automated push, email and WhatsApp reminders so no lead goes cold.' },
-      { icon: 'monitoring', title: 'Reports & dashboards', desc: 'Conversion funnels, team performance and revenue forecasts in real time.' },
-      { icon: 'hub', title: 'Integrations', desc: 'Connect website forms, Meta/Google lead ads, payment gateways and email.' },
+    "intro": "I provide custom CRM development for field sales teams that need lead stages, follow-ups, field visits, staff permissions and reporting. My relevant work includes TMConnect and HRMS/CRM. I work from Noida, India, with 4+ years of development experience. Send your requirements by email or WhatsApp so I can assess the scope, dependencies and delivery milestones.",
+    "problems": [
+      "Leads are scattered across WhatsApp, Excel sheets and notebooks, and follow-ups get missed.",
+      "Per-user pricing on Salesforce, Zoho or HubSpot is growing faster than your team.",
+      "Field agents and telecallers need a simple mobile app, not a complex desktop tool."
     ],
-    techStack: ['React Native', 'Flutter', 'Next.js', 'Node.js', 'Supabase', 'PostgreSQL', 'Firebase'],
-    relatedProjects: ['hrms-crm', 'TMConnact'],
-    faqs: [
-      { q: 'Why build a custom CRM instead of using Zoho or HubSpot?', a: 'A custom CRM matches your exact workflow, has no per-user licence fees, and you own the data and code. It is the better choice when your process is specific (for example field visits or telecalling) or your team is growing fast.' },
-      { q: 'Can the CRM work on mobile for field staff?', a: 'Yes. I build companion Android/iOS apps for telecallers and field agents with role-based dashboards. I built exactly this kind of app (TMConnect) in production.' },
-      { q: 'Can you import our existing data from Excel or another CRM?', a: 'Yes. Existing leads, customers and history can be migrated from Excel, CSV or most CRM exports during setup.' },
-      { q: 'How secure is customer data?', a: 'Data is stored in PostgreSQL with role-based access and row-level security, encrypted connections, and daily backups.' },
+    "deliverables": [
+      {
+        "icon": "filter_alt",
+        "title": "Lead & pipeline management",
+        "desc": "Capture leads from forms, ads and calls; move them through custom stages."
+      },
+      {
+        "icon": "call",
+        "title": "Telecaller & field-agent apps",
+        "desc": "Mobile apps with call logging, visit check-ins and daily targets."
+      },
+      {
+        "icon": "manage_accounts",
+        "title": "Role-based access",
+        "desc": "Admin, manager and agent roles with row-level data security."
+      },
+      {
+        "icon": "alarm",
+        "title": "Follow-up reminders",
+        "desc": "Automated push, email and WhatsApp reminders so no lead goes cold."
+      },
+      {
+        "icon": "monitoring",
+        "title": "Reports & dashboards",
+        "desc": "Conversion funnels, team performance and revenue forecasts in real time."
+      },
+      {
+        "icon": "hub",
+        "title": "Integrations",
+        "desc": "Connect website forms, Meta/Google lead ads, payment gateways and email."
+      }
     ],
+    "techStack": [
+      "React Native",
+      "Flutter",
+      "Next.js",
+      "Node.js",
+      "Supabase",
+      "PostgreSQL",
+      "Firebase"
+    ],
+    "relatedProjects": [
+      "hrms-crm",
+      "TMConnact"
+    ],
+    "faqs": [
+      {
+        "q": "What does your crm systems service include?",
+        "a": "I scope lead stages, follow-ups, field visits, staff permissions and reporting around your business workflow. The proposal lists the included features, integrations, testing and handover deliverables."
+      },
+      {
+        "q": "How much does crm systems cost?",
+        "a": "The price depends on the agreed scope; I have not published a universal starting price. Send the users, required features, integrations and existing assets for a written estimate that separates development and recurring costs."
+      },
+      {
+        "q": "How long will the first release take?",
+        "a": "I estimate delivery after reviewing the workflow and dependencies. The milestone plan identifies required approvals, integration access and what you can test at each stage."
+      },
+      {
+        "q": "Can we work entirely by email and WhatsApp?",
+        "a": "Yes, I handle freelance project enquiries and written project updates through email and WhatsApp. Send a project brief; no call booking is required."
+      },
+      {
+        "q": "What relevant work can I review?",
+        "a": "My relevant portfolio includes TMConnect and HRMS/CRM. Review the case studies and ask about my role and the scope closest to your project; portfolio totals are not results guaranteed for your business."
+      },
+      {
+        "q": "What will I own when the project is delivered?",
+        "a": "Source-code ownership, repository access, deployment instructions and support terms are agreed in the written contract. External services, existing licences and third-party intellectual property need their own terms."
+      },
+      {
+        "q": "Can you improve an existing product?",
+        "a": "Yes, I can assess a defined improvement to an existing product. Share the current stack, repository access arrangements and the problem to reproduce before I quote the work."
+      }
+    ],
+    "buyerSections": [
+      {
+        "heading": "How I scope your crm systems project",
+        "text": "I recommend configuring an existing CRM when its standard workflow meets your needs. A custom system becomes worth discussing when field visits, permissions or disconnected records block daily work. I ask for sample exports and a written definition of each sales stage. Hosting, support and any third-party licences remain separate cost items."
+      },
+      {
+        "heading": "What determines price and delivery",
+        "text": "I quote the agreed scope after reviewing the users, essential features, integrations and existing code or data. The written proposal separates development from recurring services and lists milestones, acceptance checks and handover terms. I do not publish an unconfirmed starting price or promise a launch date before that review."
+      }
+    ],
+    "comparison": {
+      "headers": [
+        "Scope option",
+        "What we define",
+        "Quote depends on"
+      ],
+      "rows": [
+        [
+          "Configure existing CRM",
+          "Standard sales stages and existing integrations",
+          "Available plans, limitations and configuration effort"
+        ],
+        [
+          "Custom CRM first release",
+          "One sales workflow and role-based access",
+          "Lead sources, assignment and reporting rules"
+        ],
+        [
+          "Field sales companion",
+          "Mobile visits, offline capture and office sync",
+          "Device permissions, conflicts and source CRM APIs"
+        ]
+      ],
+      "caption": "Scope comparison, not published package prices. Request a written estimate for your requirements."
+    },
+    "cta": "Send your sales workflow",
+    "relatedGuides": [
+      "freelance-software-development-cost",
+      "plan-custom-software-project"
+    ]
   },
   {
-    slug: 'erp-development',
-    name: 'Custom ERP Development',
-    shortName: 'ERP Systems',
-    icon: 'account_tree',
-    headline: 'One system for inventory, orders, billing and people.',
-    metaTitle: 'Custom ERP Software Development for SMEs — ERP Developer India',
-    metaDescription:
-      'Custom ERP software for small and mid-size businesses: inventory, purchase, sales, billing, HR and reporting in one web + mobile system. Built by full stack developer Gagan Shukla.',
-    keywords: ['Custom ERP Development', 'ERP Software for SME', 'ERP Developer India', 'Inventory Management Software', 'Billing Software Development', 'Business Management Software'],
-    intro:
-      'Most growing businesses run on a patchwork of Tally, Excel and WhatsApp groups. A custom ERP connects inventory, purchasing, sales, billing, staff and reporting into one source of truth, accessible from the office and from a phone.',
-    problems: [
-      'Stock, orders and billing live in different tools, so nobody trusts the numbers.',
-      'Generic ERPs are expensive, bloated and take months to configure.',
-      'Owners want live business reports on their phone, not at month-end.',
+    "slug": "erp-development",
+    "name": "Custom ERP Developer for Business",
+    "shortName": "ERP Systems",
+    "icon": "account_tree",
+    "headline": "Freelance project delivery, with scope and milestones agreed in writing.",
+    "metaTitle": "Custom ERP Developer for Business | Gagan Shukla",
+    "metaDescription": "I build erp systems for business workflows. 4+ years of experience. Send your scope by email or WhatsApp for a written quote.",
+    "keywords": [
+      "Custom ERP Development",
+      "ERP Software for SME",
+      "ERP Developer India",
+      "Inventory Management Software",
+      "Billing Software Development",
+      "Business Management Software"
     ],
-    deliverables: [
-      { icon: 'inventory_2', title: 'Inventory & warehouse', desc: 'Stock levels, batches, low-stock alerts and multi-location tracking.' },
-      { icon: 'receipt_long', title: 'Sales, purchase & billing', desc: 'Quotations, orders, invoices and GST-ready billing workflows.' },
-      { icon: 'groups', title: 'HR & payroll module', desc: 'Attendance, leave and payroll, built on my production HRMS experience.' },
-      { icon: 'query_stats', title: 'Live reports', desc: 'Sales, stock and cash-flow dashboards on web and mobile.' },
-      { icon: 'lock_person', title: 'Granular permissions', desc: 'Department-level roles and audit trails for every change.' },
-      { icon: 'extension', title: 'Modular rollout', desc: 'Launch one module first, then add more as your team adopts it.' },
+    "intro": "I provide custom ERP development for businesses that need inventory, purchasing, approval rules and operational reports. My relevant work includes HRMS/CRM and related business software. I work from Noida, India, with 4+ years of development experience. Send your requirements by email or WhatsApp so I can assess the scope, dependencies and delivery milestones.",
+    "problems": [
+      "Stock, orders and billing live in different tools, so nobody trusts the numbers.",
+      "Generic ERPs are expensive, bloated and take months to configure.",
+      "Owners want live business reports on their phone, not at month-end."
     ],
-    techStack: ['Next.js', 'React Native', 'Node.js', 'Django', 'PostgreSQL', 'Supabase', 'Docker', 'AWS'],
-    relatedProjects: ['hrms-crm', 'hashkart', 'truckmitr'],
-    faqs: [
-      { q: 'What modules can a custom ERP include?', a: 'Common modules are inventory, purchase, sales, billing/invoicing, HR & payroll, CRM and reporting. We start with the modules that remove the biggest bottleneck and add others in phases.' },
-      { q: 'Is a custom ERP affordable for a small business?', a: 'Yes, when built modularly. You pay for the modules you need now, avoid per-user licences, and own the software outright.' },
-      { q: 'Can the ERP integrate with Tally or our accounting software?', a: 'Yes. Data can be exported or synced with accounting tools, payment gateways and e-commerce platforms through APIs or scheduled exports.' },
-      { q: 'Will it work on mobile?', a: 'Yes. Every module is responsive on the web, and a companion mobile app can be added for field staff, managers and owners.' },
+    "deliverables": [
+      {
+        "icon": "inventory_2",
+        "title": "Inventory & warehouse",
+        "desc": "Stock levels, batches, low-stock alerts and multi-location tracking."
+      },
+      {
+        "icon": "receipt_long",
+        "title": "Sales, purchase & billing",
+        "desc": "Quotations, orders, invoices and GST-ready billing workflows."
+      },
+      {
+        "icon": "groups",
+        "title": "HR & payroll module",
+        "desc": "Attendance, leave and payroll, built on my production HRMS experience."
+      },
+      {
+        "icon": "query_stats",
+        "title": "Live reports",
+        "desc": "Sales, stock and cash-flow dashboards on web and mobile."
+      },
+      {
+        "icon": "lock_person",
+        "title": "Granular permissions",
+        "desc": "Department-level roles and audit trails for every change."
+      },
+      {
+        "icon": "extension",
+        "title": "Modular rollout",
+        "desc": "Launch one module first, then add more as your team adopts it."
+      }
     ],
+    "techStack": [
+      "Next.js",
+      "React Native",
+      "Node.js",
+      "Django",
+      "PostgreSQL",
+      "Supabase",
+      "Docker",
+      "AWS"
+    ],
+    "relatedProjects": [
+      "hrms-crm",
+      "hashkart",
+      "truckmitr"
+    ],
+    "faqs": [
+      {
+        "q": "What does your erp systems service include?",
+        "a": "I scope inventory, purchasing, approval rules and operational reports around your business workflow. The proposal lists the included features, integrations, testing and handover deliverables."
+      },
+      {
+        "q": "How much does erp systems cost?",
+        "a": "The price depends on the agreed scope; I have not published a universal starting price. Send the users, required features, integrations and existing assets for a written estimate that separates development and recurring costs."
+      },
+      {
+        "q": "How long will the first release take?",
+        "a": "I estimate delivery after reviewing the workflow and dependencies. The milestone plan identifies required approvals, integration access and what you can test at each stage."
+      },
+      {
+        "q": "Can we work entirely by email and WhatsApp?",
+        "a": "Yes, I handle freelance project enquiries and written project updates through email and WhatsApp. Send a project brief; no call booking is required."
+      },
+      {
+        "q": "What relevant work can I review?",
+        "a": "My relevant portfolio includes HRMS/CRM and related business software. Review the case studies and ask about my role and the scope closest to your project; portfolio totals are not results guaranteed for your business."
+      },
+      {
+        "q": "What will I own when the project is delivered?",
+        "a": "Source-code ownership, repository access, deployment instructions and support terms are agreed in the written contract. External services, existing licences and third-party intellectual property need their own terms."
+      },
+      {
+        "q": "Can you improve an existing product?",
+        "a": "Yes, I can assess a defined improvement to an existing product. Share the current stack, repository access arrangements and the problem to reproduce before I quote the work."
+      }
+    ],
+    "buyerSections": [
+      {
+        "heading": "How I scope your erp systems project",
+        "text": "I scope one operational module before proposing a full ERP replacement. I need the source of truth for stock, purchasing and finance, including who can correct a record. I agree migration checks and reconciliation reports with the business owner. Accounting and statutory requirements must be supplied and approved by your advisers."
+      },
+      {
+        "heading": "What determines price and delivery",
+        "text": "I quote the agreed scope after reviewing the users, essential features, integrations and existing code or data. The written proposal separates development from recurring services and lists milestones, acceptance checks and handover terms. I do not publish an unconfirmed starting price or promise a launch date before that review."
+      }
+    ],
+    "comparison": {
+      "headers": [
+        "Scope option",
+        "What we define",
+        "Quote depends on"
+      ],
+      "rows": [
+        [
+          "Operations module",
+          "One stock or purchasing workflow",
+          "Units, locations, permissions and approval rules"
+        ],
+        [
+          "Connected ERP modules",
+          "Shared records across agreed departments",
+          "Finance system boundaries and reconciliation"
+        ],
+        [
+          "ERP migration",
+          "Import and validation of existing records",
+          "Export format, duplicate handling and opening balances"
+        ]
+      ],
+      "caption": "Scope comparison, not published package prices. Request a written estimate for your requirements."
+    },
+    "cta": "Send your operations brief",
+    "relatedGuides": [
+      "freelance-software-development-cost",
+      "plan-custom-software-project"
+    ]
   },
   {
-    slug: 'hrms-software-development',
-    name: 'HRMS & Payroll Software',
-    shortName: 'HRMS & Payroll',
-    icon: 'badge',
-    headline: 'Attendance, leave and payroll, all from employees’ phones.',
-    metaTitle: 'HRMS & Payroll Software Development — Custom HR App Developer',
-    metaDescription:
-      'Custom HRMS and payroll software with mobile attendance, leave management, payroll automation and employee self-service. Built by the developer of a production HRMS & CRM app.',
-    keywords: ['HRMS Software Development', 'Payroll Software Development', 'Attendance App Development', 'Leave Management System', 'Employee Management App', 'Custom HR Software India'],
-    intro:
-      'I have built and shipped a production HRMS & CRM app on the Play Store and App Store. I can build a version tailored to your company’s attendance rules, leave policies and payroll structure.',
-    problems: [
-      'Attendance and leave are tracked on paper or spreadsheets and payroll takes days.',
-      'Mismatches between attendance and salary create disputes every month.',
-      'Employees have no self-service app for payslips, leave or announcements.',
+    "slug": "hrms-software-development",
+    "name": "Custom HRMS App Developer",
+    "shortName": "HRMS & Payroll",
+    "icon": "badge",
+    "headline": "Freelance project delivery, with scope and milestones agreed in writing.",
+    "metaTitle": "Custom HRMS App Developer | Gagan Shukla",
+    "metaDescription": "I build hrms & payroll for business workflows. 4+ years of experience. Send your scope by email or WhatsApp for a written quote.",
+    "keywords": [
+      "HRMS Software Development",
+      "Payroll Software Development",
+      "Attendance App Development",
+      "Leave Management System",
+      "Employee Management App",
+      "Custom HR Software India"
     ],
-    deliverables: [
-      { icon: 'fingerprint', title: 'Mobile attendance', desc: 'Geo-fenced check-in/out with selfie or location verification.' },
-      { icon: 'event_busy', title: 'Leave management', desc: 'Custom leave policies, approvals and balances.' },
-      { icon: 'account_balance_wallet', title: 'Automated payroll', desc: 'Payroll calculated directly from attendance, with payslip generation.' },
-      { icon: 'person', title: 'Employee self-service', desc: 'Payslips, documents, holidays and announcements in one app.' },
-      { icon: 'notifications', title: 'Notifications', desc: 'Push alerts for approvals, reminders and company updates.' },
-      { icon: 'insights', title: 'HR analytics', desc: 'Headcount, attendance trends and payroll cost reports.' },
+    "intro": "I provide custom HRMS app development for businesses that need attendance, employee records, leave approvals and manager dashboards. My relevant work includes HRMS/CRM. I work from Noida, India, with 4+ years of development experience. Send your requirements by email or WhatsApp so I can assess the scope, dependencies and delivery milestones.",
+    "problems": [
+      "Attendance and leave are tracked on paper or spreadsheets and payroll takes days.",
+      "Mismatches between attendance and salary create disputes every month.",
+      "Employees have no self-service app for payslips, leave or announcements."
     ],
-    techStack: ['React Native', 'Node.js', 'Supabase', 'PostgreSQL', 'Firebase Auth', 'Redux Toolkit'],
-    relatedProjects: ['hrms-crm'],
-    faqs: [
-      { q: 'Have you built an HRMS before?', a: 'Yes. My HRMS & CRM app, covering attendance, leave, payroll and notifications, is published on the Play Store and App Store. See the case study on this site.' },
-      { q: 'Can it handle our specific leave and payroll rules?', a: 'Yes. Leave types, accrual rules, shifts, overtime and salary components are configured to match your policy.' },
-      { q: 'Does attendance work without internet?', a: 'Check-ins can be stored offline on the device and synced automatically when connectivity returns.' },
-      { q: 'How many employees can it support?', a: 'The architecture (PostgreSQL + Supabase) comfortably scales from 10 to several thousand employees.' },
+    "deliverables": [
+      {
+        "icon": "fingerprint",
+        "title": "Mobile attendance",
+        "desc": "Geo-fenced check-in/out with selfie or location verification."
+      },
+      {
+        "icon": "event_busy",
+        "title": "Leave management",
+        "desc": "Custom leave policies, approvals and balances."
+      },
+      {
+        "icon": "account_balance_wallet",
+        "title": "Automated payroll",
+        "desc": "Payroll calculated directly from attendance, with payslip generation."
+      },
+      {
+        "icon": "person",
+        "title": "Employee self-service",
+        "desc": "Payslips, documents, holidays and announcements in one app."
+      },
+      {
+        "icon": "notifications",
+        "title": "Notifications",
+        "desc": "Push alerts for approvals, reminders and company updates."
+      },
+      {
+        "icon": "insights",
+        "title": "HR analytics",
+        "desc": "Headcount, attendance trends and payroll cost reports."
+      }
     ],
+    "techStack": [
+      "React Native",
+      "Node.js",
+      "Supabase",
+      "PostgreSQL",
+      "Firebase Auth",
+      "Redux Toolkit"
+    ],
+    "relatedProjects": [
+      "hrms-crm"
+    ],
+    "faqs": [
+      {
+        "q": "What does your hrms & payroll service include?",
+        "a": "I scope attendance, employee records, leave approvals and manager dashboards around your business workflow. The proposal lists the included features, integrations, testing and handover deliverables."
+      },
+      {
+        "q": "How much does hrms & payroll cost?",
+        "a": "The price depends on the agreed scope; I have not published a universal starting price. Send the users, required features, integrations and existing assets for a written estimate that separates development and recurring costs."
+      },
+      {
+        "q": "How long will the first release take?",
+        "a": "I estimate delivery after reviewing the workflow and dependencies. The milestone plan identifies required approvals, integration access and what you can test at each stage."
+      },
+      {
+        "q": "Can we work entirely by email and WhatsApp?",
+        "a": "Yes, I handle freelance project enquiries and written project updates through email and WhatsApp. Send a project brief; no call booking is required."
+      },
+      {
+        "q": "What relevant work can I review?",
+        "a": "My relevant portfolio includes HRMS/CRM. Review the case studies and ask about my role and the scope closest to your project; portfolio totals are not results guaranteed for your business."
+      },
+      {
+        "q": "What will I own when the project is delivered?",
+        "a": "Source-code ownership, repository access, deployment instructions and support terms are agreed in the written contract. External services, existing licences and third-party intellectual property need their own terms."
+      },
+      {
+        "q": "Can you improve an existing product?",
+        "a": "Yes, I can assess a defined improvement to an existing product. Share the current stack, repository access arrangements and the problem to reproduce before I quote the work."
+      }
+    ],
+    "buyerSections": [
+      {
+        "heading": "How I scope your hrms & payroll project",
+        "text": "I define attendance rules before implementing a check-in screen. The scope needs to cover missed check-ins, manager corrections, offline submissions and employee access to their records. I keep payroll calculations separate unless their rules and validation are explicitly included. Staff privacy and retention requirements come from your approved business policy."
+      },
+      {
+        "heading": "What determines price and delivery",
+        "text": "I quote the agreed scope after reviewing the users, essential features, integrations and existing code or data. The written proposal separates development from recurring services and lists milestones, acceptance checks and handover terms. I do not publish an unconfirmed starting price or promise a launch date before that review."
+      }
+    ],
+    "comparison": {
+      "headers": [
+        "Scope option",
+        "What we define",
+        "Quote depends on"
+      ],
+      "rows": [
+        [
+          "Attendance workflow",
+          "Employee check-ins and manager review",
+          "Device access, offline rules and location requirements"
+        ],
+        [
+          "HR operations",
+          "Employee records, leave and permissions",
+          "Approval chains and export requirements"
+        ],
+        [
+          "HRMS integration",
+          "Connections to an existing payroll or HR tool",
+          "Documented API, data boundaries and audit requirements"
+        ]
+      ],
+      "caption": "Scope comparison, not published package prices. Request a written estimate for your requirements."
+    },
+    "cta": "Send your HRMS brief",
+    "relatedGuides": [
+      "freelance-software-development-cost",
+      "plan-custom-software-project"
+    ]
   },
   {
-    slug: 'ecommerce-development',
-    name: 'E-commerce App & Website Development',
-    shortName: 'E-commerce',
-    icon: 'shopping_cart',
-    headline: 'Online stores and marketplace apps that convert.',
-    metaTitle: 'E-commerce App & Website Development — Multi-Vendor Marketplace Developer',
-    metaDescription:
-      'Custom e-commerce websites and shopping apps: product catalogues, carts, Razorpay/Stripe checkout, multi-vendor marketplaces and admin dashboards. Flutter, React Native and Next.js.',
-    keywords: ['E-commerce App Development', 'E-commerce Website Development', 'Multi Vendor Marketplace Development', 'Shopping App Developer', 'Razorpay Integration', 'Flutter E-commerce App'],
-    intro:
-      'From a single-brand store to a multi-vendor marketplace with admin, seller and buyer roles, I build e-commerce apps and websites with fast catalogues, smooth checkout and the dashboards you need to run the business.',
-    problems: [
-      'Marketplace commissions and Shopify app fees are eating into your margins.',
-      'Your current store is slow on mobile and loses customers at checkout.',
-      'You need seller onboarding, commissions and order routing for a marketplace.',
+    "slug": "ecommerce-development",
+    "name": "Freelance Ecommerce App Developer",
+    "shortName": "E-commerce",
+    "icon": "shopping_cart",
+    "headline": "Freelance project delivery, with scope and milestones agreed in writing.",
+    "metaTitle": "Freelance Ecommerce App Developer | Gagan Shukla",
+    "metaDescription": "I build e-commerce for business workflows. 4+ years of experience. Send your scope by email or WhatsApp for a written quote.",
+    "keywords": [
+      "E-commerce App Development",
+      "E-commerce Website Development",
+      "Multi Vendor Marketplace Development",
+      "Shopping App Developer",
+      "Razorpay Integration",
+      "Flutter E-commerce App"
     ],
-    deliverables: [
-      { icon: 'storefront', title: 'Catalogue & search', desc: 'Fast product listings, filters, variants and image galleries.' },
-      { icon: 'shopping_bag', title: 'Cart & checkout', desc: 'Razorpay, Stripe and UPI checkout with order tracking.' },
-      { icon: 'store', title: 'Multi-vendor marketplace', desc: 'Admin / Seller / Buyer roles, commissions and vendor dashboards.' },
-      { icon: 'local_shipping', title: 'Orders & delivery', desc: 'Order states, shipping integrations and customer notifications.' },
-      { icon: 'loyalty', title: 'Wishlist, coupons & reviews', desc: 'The retention features shoppers expect.' },
-      { icon: 'analytics', title: 'Sales analytics', desc: 'Revenue, best-sellers and inventory dashboards.' },
+    "intro": "I provide freelance ecommerce app development for businesses that need product catalogues, checkout, order status and merchant administration. My relevant work includes HashKart and GlowCart. I work from Noida, India, with 4+ years of development experience. Send your requirements by email or WhatsApp so I can assess the scope, dependencies and delivery milestones.",
+    "problems": [
+      "Marketplace commissions and Shopify app fees are eating into your margins.",
+      "Your current store is slow on mobile and loses customers at checkout.",
+      "You need seller onboarding, commissions and order routing for a marketplace."
     ],
-    techStack: ['Flutter', 'React Native', 'Next.js', 'Node.js', 'Django REST', 'PostgreSQL', 'MongoDB', 'Razorpay', 'Stripe'],
-    relatedProjects: ['hashkart', 'glowcart'],
-    faqs: [
-      { q: 'Can you build a multi-vendor marketplace?', a: 'Yes. HashKart, one of my projects, is a multi-vendor e-commerce app with separate Admin, Seller and Buyer roles and REST APIs for orders, payments and vendor management.' },
-      { q: 'Which payment gateways do you integrate?', a: 'Razorpay, Stripe, UPI and PayPal, with server-side payment verification and webhooks.' },
-      { q: 'Do I get both an app and a website?', a: 'You can. A shared backend can power a Next.js website and Flutter/React Native apps at the same time.' },
-      { q: 'Can you migrate my existing store?', a: 'Yes. Products, customers and orders can be migrated from Shopify, WooCommerce or CSV exports.' },
+    "deliverables": [
+      {
+        "icon": "storefront",
+        "title": "Catalogue & search",
+        "desc": "Fast product listings, filters, variants and image galleries."
+      },
+      {
+        "icon": "shopping_bag",
+        "title": "Cart & checkout",
+        "desc": "Razorpay, Stripe and UPI checkout with order tracking."
+      },
+      {
+        "icon": "store",
+        "title": "Multi-vendor marketplace",
+        "desc": "Admin / Seller / Buyer roles, commissions and vendor dashboards."
+      },
+      {
+        "icon": "local_shipping",
+        "title": "Orders & delivery",
+        "desc": "Order states, shipping integrations and customer notifications."
+      },
+      {
+        "icon": "loyalty",
+        "title": "Wishlist, coupons & reviews",
+        "desc": "The retention features shoppers expect."
+      },
+      {
+        "icon": "analytics",
+        "title": "Sales analytics",
+        "desc": "Revenue, best-sellers and inventory dashboards."
+      }
     ],
+    "techStack": [
+      "Flutter",
+      "React Native",
+      "Next.js",
+      "Node.js",
+      "Django REST",
+      "PostgreSQL",
+      "MongoDB",
+      "Razorpay",
+      "Stripe"
+    ],
+    "relatedProjects": [
+      "hashkart",
+      "glowcart"
+    ],
+    "faqs": [
+      {
+        "q": "What does your e-commerce service include?",
+        "a": "I scope product catalogues, checkout, order status and merchant administration around your business workflow. The proposal lists the included features, integrations, testing and handover deliverables."
+      },
+      {
+        "q": "How much does e-commerce cost?",
+        "a": "The price depends on the agreed scope; I have not published a universal starting price. Send the users, required features, integrations and existing assets for a written estimate that separates development and recurring costs."
+      },
+      {
+        "q": "How long will the first release take?",
+        "a": "I estimate delivery after reviewing the workflow and dependencies. The milestone plan identifies required approvals, integration access and what you can test at each stage."
+      },
+      {
+        "q": "Can we work entirely by email and WhatsApp?",
+        "a": "Yes, I handle freelance project enquiries and written project updates through email and WhatsApp. Send a project brief; no call booking is required."
+      },
+      {
+        "q": "What relevant work can I review?",
+        "a": "My relevant portfolio includes HashKart and GlowCart. Review the case studies and ask about my role and the scope closest to your project; portfolio totals are not results guaranteed for your business."
+      },
+      {
+        "q": "What will I own when the project is delivered?",
+        "a": "Source-code ownership, repository access, deployment instructions and support terms are agreed in the written contract. External services, existing licences and third-party intellectual property need their own terms."
+      },
+      {
+        "q": "Can you improve an existing product?",
+        "a": "Yes, I can assess a defined improvement to an existing product. Share the current stack, repository access arrangements and the problem to reproduce before I quote the work."
+      }
+    ],
+    "buyerSections": [
+      {
+        "heading": "How I scope your e-commerce project",
+        "text": "I trace an order through payment, fulfilment, cancellation and refund before deciding the first release. I need your catalogue source, inventory rules and payment-provider requirements. A multi-seller marketplace needs separate agreement on seller permissions and settlement responsibilities. I avoid quoting it as a simple storefront with extra screens."
+      },
+      {
+        "heading": "What determines price and delivery",
+        "text": "I quote the agreed scope after reviewing the users, essential features, integrations and existing code or data. The written proposal separates development from recurring services and lists milestones, acceptance checks and handover terms. I do not publish an unconfirmed starting price or promise a launch date before that review."
+      }
+    ],
+    "comparison": {
+      "headers": [
+        "Scope option",
+        "What we define",
+        "Quote depends on"
+      ],
+      "rows": [
+        [
+          "Storefront",
+          "Catalogue, product pages and checkout",
+          "Catalogue source, payment provider and fulfilment"
+        ],
+        [
+          "Shopping app",
+          "Mobile shopping and order updates",
+          "Customer accounts, notifications and backend APIs"
+        ],
+        [
+          "Marketplace",
+          "Multiple sellers and order responsibilities",
+          "Settlement rules, commission and seller permissions"
+        ]
+      ],
+      "caption": "Scope comparison, not published package prices. Request a written estimate for your requirements."
+    },
+    "cta": "Send your commerce brief",
+    "relatedGuides": [
+      "freelance-software-development-cost",
+      "plan-custom-software-project"
+    ]
   },
   {
-    slug: 'saas-mvp-development',
-    name: 'SaaS & MVP Development',
-    shortName: 'SaaS & MVPs',
-    icon: 'rocket_launch',
-    headline: 'From idea to paying users in weeks, not quarters.',
-    metaTitle: 'SaaS & MVP Development for Startups — Full Stack Developer for Hire',
-    metaDescription:
-      'Launch your startup MVP or SaaS product fast. Full stack development of web and mobile MVPs with authentication, subscriptions, dashboards and scalable architecture.',
-    keywords: ['MVP Development', 'SaaS Development', 'Startup App Developer', 'Hire Full Stack Developer', 'MVP Developer India', 'Technical Co-founder for Hire'],
-    intro:
-      'Founders need to validate fast. I build lean, production-quality MVPs (web, mobile or both) with authentication, payments and analytics, on an architecture that will not need a rewrite when you find traction.',
-    problems: [
-      'You have an idea and early interest, but no technical co-founder.',
-      'Agencies quote six months and a six-figure budget for version one.',
-      'Your prototype works in demos but falls over with real users.',
+    "slug": "saas-mvp-development",
+    "name": "Freelance SaaS MVP Developer",
+    "shortName": "SaaS & MVPs",
+    "icon": "rocket_launch",
+    "headline": "Freelance project delivery, with scope and milestones agreed in writing.",
+    "metaTitle": "Freelance SaaS MVP Developer | Gagan Shukla",
+    "metaDescription": "I build saas & mvps for business workflows. 4+ years of experience. Send your scope by email or WhatsApp for a written quote.",
+    "keywords": [
+      "MVP Development",
+      "SaaS Development",
+      "Startup App Developer",
+      "Hire Full Stack Developer",
+      "MVP Developer India",
+      "Technical Co-founder for Hire"
     ],
-    deliverables: [
-      { icon: 'bolt', title: 'Rapid MVP', desc: 'Core user journey live in weeks, with weekly demos.' },
-      { icon: 'key', title: 'Auth & user roles', desc: 'Email, Google and OTP login with role-based access.' },
-      { icon: 'credit_card', title: 'Subscriptions', desc: 'Recurring billing with Stripe or Razorpay subscriptions.' },
-      { icon: 'admin_panel_settings', title: 'Admin dashboard', desc: 'Manage users, content and metrics from day one.' },
-      { icon: 'insights', title: 'Product analytics', desc: 'Event tracking so you know what users actually do.' },
-      { icon: 'trending_up', title: 'Built to scale', desc: 'Clean architecture, CI/CD and a database designed for growth.' },
+    "intro": "I provide freelance SaaS MVP development for businesses that need tenant accounts, user roles, subscriptions and the core customer workflow. My relevant work includes SaaS work in my portfolio. I work from Noida, India, with 4+ years of development experience. Send your requirements by email or WhatsApp so I can assess the scope, dependencies and delivery milestones.",
+    "problems": [
+      "You have an idea and early interest, but no technical co-founder.",
+      "Agencies quote six months and a six-figure budget for version one.",
+      "Your prototype works in demos but falls over with real users."
     ],
-    techStack: ['Next.js', 'React Native', 'Flutter', 'Node.js', 'Supabase', 'PostgreSQL', 'Stripe', 'Vercel', 'Docker'],
-    relatedProjects: ['aura', 'hashkart', 'truckmitr'],
-    faqs: [
-      { q: 'How fast can you build an MVP?', a: 'Most MVPs launch in 4–8 weeks, depending on scope. We agree on the smallest feature set that proves your idea during discovery.' },
-      { q: 'Will I need to rebuild after the MVP?', a: 'No. I use the same production-grade stack and architecture for MVPs that I use for larger products, so the codebase grows with you.' },
-      { q: 'Can you help with product decisions, not just code?', a: 'Yes. I help prioritise features, design user flows and choose the right tech, acting as your technical partner.' },
-      { q: 'Do you sign an NDA?', a: 'Yes, happily, before you share any details of your idea.' },
+    "deliverables": [
+      {
+        "icon": "bolt",
+        "title": "Rapid MVP",
+        "desc": "Core user journey live in weeks, with weekly demos."
+      },
+      {
+        "icon": "key",
+        "title": "Auth & user roles",
+        "desc": "Email, Google and OTP login with role-based access."
+      },
+      {
+        "icon": "credit_card",
+        "title": "Subscriptions",
+        "desc": "Recurring billing with Stripe or Razorpay subscriptions."
+      },
+      {
+        "icon": "admin_panel_settings",
+        "title": "Admin dashboard",
+        "desc": "Manage users, content and metrics from day one."
+      },
+      {
+        "icon": "insights",
+        "title": "Product analytics",
+        "desc": "Event tracking so you know what users actually do."
+      },
+      {
+        "icon": "trending_up",
+        "title": "Built to scale",
+        "desc": "Clean architecture, CI/CD and a database designed for growth."
+      }
     ],
+    "techStack": [
+      "Next.js",
+      "React Native",
+      "Flutter",
+      "Node.js",
+      "Supabase",
+      "PostgreSQL",
+      "Stripe",
+      "Vercel",
+      "Docker"
+    ],
+    "relatedProjects": [
+      "aura",
+      "hashkart",
+      "truckmitr"
+    ],
+    "faqs": [
+      {
+        "q": "What does your saas & mvps service include?",
+        "a": "I scope tenant accounts, user roles, subscriptions and the core customer workflow around your business workflow. The proposal lists the included features, integrations, testing and handover deliverables."
+      },
+      {
+        "q": "How much does saas & mvps cost?",
+        "a": "The price depends on the agreed scope; I have not published a universal starting price. Send the users, required features, integrations and existing assets for a written estimate that separates development and recurring costs."
+      },
+      {
+        "q": "How long will the first release take?",
+        "a": "I estimate delivery after reviewing the workflow and dependencies. The milestone plan identifies required approvals, integration access and what you can test at each stage."
+      },
+      {
+        "q": "Can we work entirely by email and WhatsApp?",
+        "a": "Yes, I handle freelance project enquiries and written project updates through email and WhatsApp. Send a project brief; no call booking is required."
+      },
+      {
+        "q": "What relevant work can I review?",
+        "a": "My relevant portfolio includes SaaS work in my portfolio. Review the case studies and ask about my role and the scope closest to your project; portfolio totals are not results guaranteed for your business."
+      },
+      {
+        "q": "What will I own when the project is delivered?",
+        "a": "Source-code ownership, repository access, deployment instructions and support terms are agreed in the written contract. External services, existing licences and third-party intellectual property need their own terms."
+      },
+      {
+        "q": "Can you improve an existing product?",
+        "a": "Yes, I can assess a defined improvement to an existing product. Share the current stack, repository access arrangements and the problem to reproduce before I quote the work."
+      }
+    ],
+    "buyerSections": [
+      {
+        "heading": "How I scope your saas & mvps project",
+        "text": "I start a SaaS MVP with the customer action that proves the product is useful. I define tenant boundaries, roles and subscription entitlements before adding billing. I separate the first release from later automation and reporting. The quote explains what is included in hosting setup, support and source-code handover."
+      },
+      {
+        "heading": "What determines price and delivery",
+        "text": "I quote the agreed scope after reviewing the users, essential features, integrations and existing code or data. The written proposal separates development from recurring services and lists milestones, acceptance checks and handover terms. I do not publish an unconfirmed starting price or promise a launch date before that review."
+      }
+    ],
+    "comparison": {
+      "headers": [
+        "Scope option",
+        "What we define",
+        "Quote depends on"
+      ],
+      "rows": [
+        [
+          "Validation release",
+          "One customer workflow and account access",
+          "What demonstrates value to the first customer"
+        ],
+        [
+          "Paid SaaS MVP",
+          "Tenant access, billing and administration",
+          "Subscription rules, provider access and entitlements"
+        ],
+        [
+          "Existing SaaS feature",
+          "One improvement with acceptance checks",
+          "Architecture, tenant boundaries and release process"
+        ]
+      ],
+      "caption": "Scope comparison, not published package prices. Request a written estimate for your requirements."
+    },
+    "cta": "Send your SaaS brief",
+    "relatedGuides": [
+      "freelance-software-development-cost",
+      "plan-custom-software-project"
+    ]
   },
   {
-    slug: 'ai-chatbot-automation',
-    name: 'AI Chatbots & Business Automation',
-    shortName: 'AI & Automation',
-    icon: 'smart_toy',
-    headline: 'Put AI to work on your website, support and back office.',
-    metaTitle: 'AI Chatbot Development & Business Automation Services',
-    metaDescription:
-      'Custom AI chatbots for websites and apps, trained on your business data, plus workflow automation for lead capture, support and reporting. LLM integration by Gagan Shukla.',
-    keywords: ['AI Chatbot Development', 'Website Chatbot', 'LLM Integration', 'Business Automation Services', 'AI Integration Developer', 'Workflow Automation'],
-    intro:
-      'The AI assistant on this website is one I built. I add the same kind of assistant to your website or app, answering customer questions from your own content, capturing leads and handing off to your team, and I automate repetitive back-office work.',
-    problems: [
-      'Your team answers the same customer questions dozens of times a day.',
-      'Website visitors leave without contacting you outside business hours.',
-      'Manual data entry between tools wastes hours every week.',
+    "slug": "ai-chatbot-automation",
+    "name": "Freelance AI Chatbot Developer",
+    "shortName": "AI & Automation",
+    "icon": "smart_toy",
+    "headline": "Freelance project delivery, with scope and milestones agreed in writing.",
+    "metaTitle": "Freelance AI Chatbot Developer | Gagan Shukla",
+    "metaDescription": "I build ai & automation for business workflows. 4+ years of experience. Send your scope by email or WhatsApp for a written quote.",
+    "keywords": [
+      "AI Chatbot Development",
+      "Website Chatbot",
+      "LLM Integration",
+      "Business Automation Services",
+      "AI Integration Developer",
+      "Workflow Automation"
     ],
-    deliverables: [
-      { icon: 'chat', title: 'Website & in-app chatbot', desc: 'An AI assistant that answers from your own content and FAQs.' },
-      { icon: 'person_add', title: 'Lead capture', desc: 'The bot qualifies visitors and sends hot leads to your CRM or inbox.' },
-      { icon: 'description', title: 'Document Q&A', desc: 'Let staff search manuals, policies and knowledge bases in plain language.' },
-      { icon: 'autorenew', title: 'Workflow automation', desc: 'Automate emails, reports, data syncs and approvals between tools.' },
-      { icon: 'shield', title: 'Safe & private', desc: 'Server-side API keys, rate limiting and no training on your private data.' },
-      { icon: 'integration_instructions', title: 'Any stack', desc: 'Integrates with Next.js, React Native, Flutter, Supabase Edge Functions or Node.' },
+    "intro": "I provide AI chatbot development for businesses that need document-backed answers, enquiry capture and human handover. My relevant work includes the assistant on this website. I work from Noida, India, with 4+ years of development experience. Send your requirements by email or WhatsApp so I can assess the scope, dependencies and delivery milestones.",
+    "problems": [
+      "Your team answers the same customer questions dozens of times a day.",
+      "Website visitors leave without contacting you outside business hours.",
+      "Manual data entry between tools wastes hours every week."
     ],
-    techStack: ['LLM APIs', 'Supabase Edge Functions', 'Node.js', 'Next.js', 'PostgreSQL', 'Python'],
-    relatedProjects: ['hrms-crm', 'aura'],
-    faqs: [
-      { q: 'Can the chatbot answer questions about my business specifically?', a: 'Yes. It is grounded in your own website content, FAQs and documents, so answers are specific to your products and policies.' },
-      { q: 'Which AI models do you use?', a: 'I integrate leading LLM APIs and choose the model based on quality, speed and cost for your use case.' },
-      { q: 'Can it hand over to a human?', a: 'Yes. Conversations can be escalated to email, WhatsApp or your CRM with the full transcript.' },
-      { q: 'Is there an example I can try?', a: 'Yes. Click the assistant button in the bottom-right corner of this website.' },
+    "deliverables": [
+      {
+        "icon": "chat",
+        "title": "Website & in-app chatbot",
+        "desc": "An AI assistant that answers from your own content and FAQs."
+      },
+      {
+        "icon": "person_add",
+        "title": "Lead capture",
+        "desc": "The bot qualifies visitors and sends hot leads to your CRM or inbox."
+      },
+      {
+        "icon": "description",
+        "title": "Document Q&A",
+        "desc": "Let staff search manuals, policies and knowledge bases in plain language."
+      },
+      {
+        "icon": "autorenew",
+        "title": "Workflow automation",
+        "desc": "Automate emails, reports, data syncs and approvals between tools."
+      },
+      {
+        "icon": "shield",
+        "title": "Safe & private",
+        "desc": "Server-side API keys, rate limiting and no training on your private data."
+      },
+      {
+        "icon": "integration_instructions",
+        "title": "Any stack",
+        "desc": "Integrates with Next.js, React Native, Flutter, Supabase Edge Functions or Node."
+      }
     ],
-  },
+    "techStack": [
+      "LLM APIs",
+      "Supabase Edge Functions",
+      "Node.js",
+      "Next.js",
+      "PostgreSQL",
+      "Python"
+    ],
+    "relatedProjects": [
+      "hrms-crm",
+      "aura"
+    ],
+    "faqs": [
+      {
+        "q": "What does your ai & automation service include?",
+        "a": "I scope document-backed answers, enquiry capture and human handover around your business workflow. The proposal lists the included features, integrations, testing and handover deliverables."
+      },
+      {
+        "q": "How much does ai & automation cost?",
+        "a": "The price depends on the agreed scope; I have not published a universal starting price. Send the users, required features, integrations and existing assets for a written estimate that separates development and recurring costs."
+      },
+      {
+        "q": "How long will the first release take?",
+        "a": "I estimate delivery after reviewing the workflow and dependencies. The milestone plan identifies required approvals, integration access and what you can test at each stage."
+      },
+      {
+        "q": "Can we work entirely by email and WhatsApp?",
+        "a": "Yes, I handle freelance project enquiries and written project updates through email and WhatsApp. Send a project brief; no call booking is required."
+      },
+      {
+        "q": "What relevant work can I review?",
+        "a": "My relevant portfolio includes the assistant on this website. Review the case studies and ask about my role and the scope closest to your project; portfolio totals are not results guaranteed for your business."
+      },
+      {
+        "q": "What will I own when the project is delivered?",
+        "a": "Source-code ownership, repository access, deployment instructions and support terms are agreed in the written contract. External services, existing licences and third-party intellectual property need their own terms."
+      },
+      {
+        "q": "Can you improve an existing product?",
+        "a": "Yes, I can assess a defined improvement to an existing product. Share the current stack, repository access arrangements and the problem to reproduce before I quote the work."
+      }
+    ],
+    "buyerSections": [
+      {
+        "heading": "How I scope your ai & automation project",
+        "text": "I agree what the assistant can answer and when it must hand over before connecting a model. I test with questions your customers actually ask, including questions the source material cannot answer. Actions that change business records need permission checks and an approval path. Model and hosting usage are operating costs, separate from development."
+      },
+      {
+        "heading": "What determines price and delivery",
+        "text": "I quote the agreed scope after reviewing the users, essential features, integrations and existing code or data. The written proposal separates development from recurring services and lists milestones, acceptance checks and handover terms. I do not publish an unconfirmed starting price or promise a launch date before that review."
+      }
+    ],
+    "comparison": {
+      "headers": [
+        "Scope option",
+        "What we define",
+        "Quote depends on"
+      ],
+      "rows": [
+        [
+          "Website assistant",
+          "Answers from approved business information",
+          "Content ownership, limits and human handover"
+        ],
+        [
+          "Document assistant",
+          "Search across agreed source documents",
+          "Access permissions, updates and evaluation questions"
+        ],
+        [
+          "Workflow automation",
+          "A bounded action through existing tools",
+          "API access, human approval and error recovery"
+        ]
+      ],
+      "caption": "Scope comparison, not published package prices. Request a written estimate for your requirements."
+    },
+    "cta": "Send your automation brief",
+    "relatedGuides": [
+      "freelance-software-development-cost",
+      "plan-custom-software-project"
+    ]
+  }
 ];
 
 export const getService = (slug) => servicesData.find((s) => s.slug === slug);

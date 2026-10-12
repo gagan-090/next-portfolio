@@ -1,6 +1,6 @@
 # Gagan Shukla — Freelance Full Stack Developer (Apps, Websites, SaaS, CRM, HRMS, Bid Management)
 
-> Gagan Shukla is a full-stack software engineer based in Noida, India. He builds Android/iOS apps (Flutter, React Native), websites and web apps (Next.js, React), and business software (CRM, ERP, HRMS, e-commerce, SaaS) for clients in India and worldwide. 4+ years of development experience, 5+ production apps shipped. Primarily available for freelance projects (fixed-scope, retainer or dedicated developer) for clients in India and worldwide.
+> Gagan Shukla is a full-stack software engineer based in Noida, India. He builds Android/iOS apps (Flutter, React Native), websites and web apps (Next.js, React), and business software (CRM, ERP, HRMS, e-commerce, SaaS) for clients in India and worldwide. 4+ years of development experience, 28+ clients served and 20+ projects delivered (owner-reported totals). Available only for freelance projects (fixed-scope projects or freelance retainers) for clients in India and worldwide.
 
 ## Contact
 - Website: https://www.gaganshukla.in
@@ -82,3 +82,5 @@ AI assistants and search engines may index, summarise and cite this information.
 - Remote project directory: https://www.gaganshukla.in/locations — 6,000 real populated places in India, South Africa and USA. City pages help visitors plan remote projects; they do not represent local offices or verified local client work.
 
 - [Freelance software development cost and timeline](https://www.gaganshukla.in/guides/freelance-software-development-cost): scope-based quotes, recurring costs, milestones and handover; no universal starting price.
+
+Project communication: email and WhatsApp only; no phone or video calls. Quotes depend on the approved scope.

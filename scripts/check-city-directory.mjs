@@ -16,8 +16,8 @@ const sitemap=await(await fetch(`${base}/sitemap.xml`)).text();
 assert.ok(sitemap.includes('/locations</loc>'));
 const sitemapUrls=[...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>m[1]);
 assert.equal(sitemapUrls.length,new Set(sitemapUrls).size);
-for(const city of cities) assert.ok(sitemapUrls.includes(`https://www.gaganshukla.in/locations/${city.country}/${city.slug}`));
-assert.equal(sitemapUrls.filter(url=>/\/locations\/[^/]+\/[^/]+$/.test(url)).length,6000);
+for(const city of cities) assert.ok(!sitemapUrls.includes(`https://www.gaganshukla.in/locations/${city.country}/${city.slug}`));
+assert.equal(sitemapUrls.filter(url=>/\/locations\/[^/]+\/[^/]+$/.test(url)).length,0);
 assert.ok(!sitemap.includes('/page/'));
 assert.ok(!sitemapUrls.includes('https://www.gaganshukla.in/locations/india'));
 const samples=[];
@@ -32,7 +32,7 @@ for(const path of samples){
  const html=await response.text();
  const isCity=path.split('/').length===4;
  if(isCity){
-   assert.ok(!/<meta name="robots" content="[^"]*noindex/.test(html), 'City must be indexable');
+   assert.match(html,/<meta name="robots" content="noindex, follow"/, 'Directory utility must not be indexed');
    const schemas=[...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(m=>JSON.parse(m[1]));
    assert.ok(schemas.some(s=>s['@type']==='FAQPage'));
    const service=schemas.find(s=>s['@type']==='Service');

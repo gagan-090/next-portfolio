@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import ScopeTable from '@/components/services/ScopeTable';
 import DeliveredWork from '@/components/projects/DeliveredWork';
 import { guidesData } from '@/data/guides';
 import { notFound } from 'next/navigation';
@@ -57,14 +58,14 @@ export default async function ServicePage({ params }) {
             <h1 className="font-display-lg-mobile md:font-display-lg text-[36px] sm:text-[48px] md:text-[64px] text-on-surface leading-[1.05] tracking-tighter mb-6">
               {service.name}
             </h1>
-            <p className="font-subhead-italic text-subhead-italic italic text-on-surface-variant max-w-2xl">{service.headline}</p>
+            <p className="font-body-main text-lg leading-relaxed text-on-surface-variant max-w-2xl">{service.intro}</p>
           </div>
           <div className="md:col-span-4 flex flex-col gap-4">
             <Link
               href={`/contact?service=${service.slug}`}
               className="text-center bg-[#0A0A0A] text-white px-8 py-4 font-label-mono text-label-mono uppercase tracking-widest hover:bg-primary transition-colors"
             >
-              Get a Free Quote
+              {service.cta}
             </Link>
             <Link
               href="/projects"
@@ -88,7 +89,7 @@ export default async function ServicePage({ params }) {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
           <div className="md:col-span-6">
             <SectionLabel>OVERVIEW</SectionLabel>
-            <p className="font-body-main text-[18px] md:text-[20px] text-on-surface leading-relaxed">{service.intro}</p>
+            <p className="font-body-main text-[18px] md:text-[20px] text-on-surface leading-relaxed">{service.headline}</p>
           </div>
           <div className="md:col-span-6">
             <SectionLabel>SOUND FAMILIAR?</SectionLabel>
@@ -129,6 +130,14 @@ export default async function ServicePage({ params }) {
       </section>
 
       <DeliveredWork service={service.slug} />
+      <section className="max-w-[1200px] mx-auto px-gutter py-section-padding border-b border-outline-variant">
+        {service.buyerSections.map(section => <div key={section.heading} className="max-w-3xl mb-10">
+          <h2 className="font-headline-md text-2xl font-bold mb-4">{section.heading}</h2>
+          <p className="font-body-main text-on-surface-variant leading-relaxed">{section.text}</p>
+        </div>)}
+        <h2 className="font-headline-md text-2xl font-bold mb-4">Compare your first-release scope</h2>
+        <ScopeTable {...service.comparison} />
+      </section>
       <RelatedProjects ids={service.relatedProjects} />
       <ProcessSection />
       <EngagementSection />
@@ -159,7 +168,7 @@ export default async function ServicePage({ params }) {
         </ul>
       </section>
 
-      <HireCta title={`Let's talk about your ${service.shortName.toLowerCase()} project.`} service={service.slug} />
+      <HireCta title={`Send your ${service.shortName.toLowerCase()} requirements.`} service={service.slug} primaryLabel={service.cta} />
     </div>
   );
 }

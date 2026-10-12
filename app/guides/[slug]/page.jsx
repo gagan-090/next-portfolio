@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import ScopeTable from '@/components/services/ScopeTable';
 import { notFound } from 'next/navigation';
 import { guidesData, getGuide } from '@/data/guides';
 import { servicesData } from '@/data/services';
@@ -31,6 +32,8 @@ const slugify = (t) => t.toLowerCase().replace(/[^\w\s-]/g, '').trim().replace(/
 
 const Block = ({ block }) => {
   switch (block.type) {
+    case 'table':
+      return <ScopeTable {...block} />;
     case 'ul':
       return <ul className="list-disc pl-6 mb-6 space-y-2 text-on-surface-variant text-[17px] leading-relaxed">{block.items.map((i) => <li key={i}>{i}</li>)}</ul>;
     case 'ol':
@@ -75,7 +78,7 @@ export default async function GuidePage({ params }) {
         <Link href="/guides" className="font-label-mono text-[11px] uppercase tracking-widest text-on-surface-variant hover:text-primary">← All guides</Link>
         <header className="max-w-[820px] mt-8 mb-12">
           <h1 className="font-headline-lg text-4xl md:text-5xl font-bold text-on-surface leading-[1.1] tracking-tight mb-6">{guide.title}</h1>
-          <p className="font-body-main text-[19px] text-on-surface-variant leading-relaxed mb-6">{guide.description}</p>
+          <p className="font-body-main text-[19px] text-on-surface-variant leading-relaxed mb-6">{guide.intro}</p>
           <p className="font-label-mono text-[12px] text-on-surface-variant">
             By <Link href="/about" className="text-on-surface underline underline-offset-2">{site.name}</Link> · <time dateTime={guide.published}>{new Date(guide.published).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}</time> · {guide.readingTime} min read
           </p>
@@ -100,7 +103,7 @@ export default async function GuidePage({ params }) {
               </ul>
               <div className="border border-outline-variant p-6">
                 <p className="font-body-main font-bold text-on-surface mb-2">Need a developer?</p>
-                <p className="text-[14px] text-on-surface-variant mb-4">Free discovery call and a fixed quote within 48 hours.</p>
+                <p className="text-[14px] text-on-surface-variant mb-4">Send your requirements by email or WhatsApp for a written scope review. No calls required.</p>
                 <Link href="/contact" className="block text-center bg-[#0A0A0A] text-white py-3 font-label-mono text-[11px] uppercase tracking-widest hover:bg-primary">Get a Quote</Link>
               </div>
             </nav>

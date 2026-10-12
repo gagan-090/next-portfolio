@@ -29,7 +29,7 @@ for (const path of paths) {
   if (path === '/hire/south-africa') {
     const service = schemas.find((s) => s['@type'] === 'Service');
     assert.equal(service.areaServed.name, 'South Africa');
-    assert.match(html, /not offices/, 'Remote service area disclosure');
+    assert.match(html, /does not claim a local office/, 'Remote service area disclosure');
   }
   if (path === '/') {
     assert.ok(html.includes('aria-label="28+ Clients Served"'), '28+ clients served');

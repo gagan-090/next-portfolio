@@ -65,7 +65,7 @@ export const Footer = () => {
         <div className="flex flex-col gap-4">
           <span className="font-label-mono text-[11px] text-on-surface-variant uppercase tracking-widest">Get in touch</span>
           <a href={`mailto:${site.email}`} className="font-body-main text-[14px] text-on-surface hover:text-primary">{site.email}</a>
-          <a href={`tel:${site.phone}`} className="font-body-main text-[14px] text-on-surface hover:text-primary">{site.phoneDisplay}</a>
+          <a href={site.whatsapp} className="font-body-main text-[14px] text-on-surface hover:text-primary">WhatsApp project enquiries</a>
           <div className="flex gap-4">
             <a aria-label="LinkedIn" className="w-10 h-10 border border-outline-variant flex items-center justify-center hover:bg-on-surface hover:text-white transition-all duration-200" href={site.linkedin} target="_blank" rel="noopener noreferrer">
               <LinkedinIcon size={20} strokeWidth={1.5} />

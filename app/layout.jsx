@@ -3,6 +3,7 @@ import Navbar from '@/components/common/Navbar';
 import Footer from '@/components/common/Footer';
 import ScrollProgress from '@/components/common/ScrollProgress';
 import ChatBot from '@/components/ui/ChatBot';
+import LeadEvents from '@/components/seo/LeadEvents';
 import { JsonLd, personSchema, websiteSchema, professionalServiceSchema } from '@/components/seo/JsonLd';
 import { SITE_URL, site } from '@/lib/site';
 import { servicesData } from '@/data/services';
@@ -102,7 +103,8 @@ export default function RootLayout({ children }) {
         <div className="relative min-h-screen bg-white text-on-surface overflow-x-hidden w-full">
           <Navbar />
           <ScrollProgress />
-          <ChatBot />
+          <LeadEvents />
+        <ChatBot />
           <main id="main" className="pt-20">
             {children}
           </main>

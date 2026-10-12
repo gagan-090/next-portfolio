@@ -14,9 +14,9 @@ export const metadata = pageMetadata({
 
 const faqs = [
   { q: 'Are you looking for a job or freelance projects?', a: 'I am available for freelance development projects only. Enquiries should be for a website, app, SaaS product or custom business system, with an agreed scope and project contract.' },
-  { q: 'Do you work with international clients?', a: 'Yes. I work remotely with clients worldwide and keep a daily live-overlap window for calls in your time zone, with async updates the rest of the day.' },
-  { q: 'How do international payments work?', a: 'Invoices can be issued in USD, GBP, EUR, AED or your local currency and paid via Wise, PayPal or international wire. Indian clients can pay via UPI or bank transfer.' },
-  { q: 'Do you sign NDAs and IP agreements?', a: 'Yes. I sign an NDA before discussing details and a work-for-hire / IP assignment so you own 100% of the code.' },
+  { q: 'Do you work with international clients?', a: 'Yes, I accept remote freelance enquiries worldwide. Project decisions and reviews use email and WhatsApp, with written deadlines agreed in your time zone.' },
+  { q: 'How do international payments work?', a: 'Currency, payment method and milestones are agreed in the written proposal. Development and third-party operating costs are listed separately.' },
+  { q: 'Do you sign NDAs and IP agreements?', a: 'NDA requirements and source-code ownership are agreed in the project contract. Existing licences and third-party services retain their own terms.' },
 ];
 
 const LocationGrid = ({ items }) => (

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import ScopeTable from '@/components/services/ScopeTable';
 import { notFound } from 'next/navigation';
 import { locationsData, getLocation } from '@/data/locations';
 import { servicesData } from '@/data/services';
@@ -81,7 +82,7 @@ export default async function HireLocationPage({ params }) {
           </div>
           <div className="md:col-span-4 flex flex-col gap-4">
             <Link href="/contact" className="text-center bg-[#0A0A0A] text-white px-8 py-4 font-label-mono text-label-mono uppercase tracking-widest hover:bg-primary transition-colors">
-              Get a Free Quote
+              Send your logistics brief
             </Link>
             <a href={site.whatsapp} target="_blank" rel="noopener noreferrer" className="text-center border border-[#0A0A0A] px-8 py-4 font-label-mono text-label-mono uppercase tracking-widest hover:bg-[#F5F8FF] transition-colors">
               WhatsApp Me
@@ -100,8 +101,8 @@ export default async function HireLocationPage({ params }) {
           <div className="border border-outline-variant p-8">
             <span className="material-symbols-outlined text-primary text-[32px] mb-4 block" aria-hidden="true">schedule</span>
             <h3 className="font-body-main font-bold text-lg text-on-surface mb-3">Time zone · {loc.timezone.label}</h3>
-            <p className="font-body-main text-on-surface-variant leading-relaxed mb-2"><strong className="text-on-surface">Live overlap:</strong> {loc.timezone.overlap}</p>
-            <p className="font-label-mono text-[11px] text-on-surface-variant uppercase tracking-wider">My hours: {loc.timezone.meeting}</p>
+            <p className="font-body-main text-on-surface-variant leading-relaxed mb-2"><strong className="text-on-surface">Written reviews:</strong> {loc.timezone.overlap}</p>
+            <p className="font-label-mono text-[11px] text-on-surface-variant uppercase tracking-wider">Contact method: {loc.timezone.meeting}</p>
           </div>
           <div className="border border-outline-variant p-8">
             <span className="material-symbols-outlined text-primary text-[32px] mb-4 block" aria-hidden="true">payments</span>
@@ -161,6 +162,11 @@ export default async function HireLocationPage({ params }) {
         </div>
       </section>}
       <RelatedProjects ids={['truckmitr', 'hrms-crm', 'hashkart']} />
+      <section className="max-w-[1200px] mx-auto px-gutter py-12 border-b border-outline-variant">
+        <h2 className="font-headline-md text-2xl font-bold mb-4">Compare your logistics project scope</h2>
+        <ScopeTable {...servicesData.find(s => s.slug === 'logistics-app-development').comparison} />
+        <div className="flex flex-wrap gap-5"><Link className="text-primary underline" href="/guides/logistics-app-development-requirements">Logistics app requirements checklist</Link><Link className="text-primary underline" href="/guides/freelance-software-development-cost">What determines your development quote</Link><Link className="text-primary underline" href="/projects/vrc-mobility">VRC Mobility website case study</Link></div>
+      </section>
       <ProcessSection />
       <FaqSection faqs={loc.faqs} heading={`Freelance projects from ${label}: FAQ`} />
 

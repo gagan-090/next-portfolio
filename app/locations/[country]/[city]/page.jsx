@@ -15,7 +15,7 @@ export function generateStaticParams() {
 export async function generateMetadata({params}) {
   const {country,city:slug}=await params; const city=findCity(country,slug);
   if (!city) return {};
-  return pageMetadata({title:`Freelance App & Web Developer for ${city.name}, ${city.region}`,description:`Discuss a remote app, website, SaaS or logistics project for ${city.name}, ${city.region}, ${cityCountries[country].name}. Gagan Shukla works from Noida, India.`,path:cityPath(city)});
+  return pageMetadata({title:`Freelance App & Web Developer for ${city.name}, ${city.region}`,description:`Discuss a remote app, website, SaaS or logistics project for ${city.name}, ${city.region}, ${cityCountries[country].name}. Gagan Shukla works from Noida, India.`,path:cityPath(city),noindex:true});
 }
 const services=[
   {slug:'web-development',title:'Website & lead enquiries',brief:'Bring your services, target customers, contact routes and examples of enquiries you want to receive.'},
@@ -31,7 +31,7 @@ export default async function CityPage({params}) {
   const faqs = [
     { q: `Can I work with a freelance developer for a project in ${city.name}?`, a: `Yes. Gagan Shukla offers remote app, website, SaaS, CRM and logistics development for businesses in ${city.name}, ${city.region}, ${info.name}. He works from Noida, India, and accepts freelance project contracts.` },
     { q: `How much does app or website development for ${city.name} cost?`, a: 'Pricing is based on your scope rather than your city. Share your users, essential features, integrations, platforms and content requirements for a written project quote. Hosting, subscriptions and third-party fees should be listed separately.' },
-    { q: `How do we schedule project reviews from ${city.name}?`, a: `Use ${city.timezone} as your review time zone. The meeting planner below converts a proposed UTC time to both ${city.name} and Noida. A recurring meeting slot and approval process are agreed before work starts.` },
+    { q: `How do we schedule project reviews from ${city.name}?`, a: `Use ${city.timezone} as your review time zone. The review-time converter below converts a proposed UTC deadline to both ${city.name} and Noida. Written reviews use email and WhatsApp; no calls required.` },
     { q: `Do you have a local office in ${city.name}?`, a: 'No. Delivery is remote from Noida, India. Overall portfolio totals are 28+ clients served and 20+ projects delivered; they do not represent completed work in every listed city.' },
     { q: 'What do I receive at handover?', a: 'The written scope defines source-code ownership, repository access, deployment instructions, credentials handover and support terms. Agree acceptance criteria and a complete user-journey test before approving the final milestone.' },
   ];

@@ -5,11 +5,10 @@ import { motion } from 'framer-motion';
 import { fadeUp } from '../utils/animations';
 import { supabase } from '../lib/supabase';
 import { site } from '../lib/site';
+import { trackLeadEvent } from '../lib/leadEvents';
 import { servicesData } from '../data/services';
 
-const budgets = ['Not sure yet', 'Under ₹50k / $600', '₹50k – ₹2L / $600 – $2.5k', '₹2L – ₹5L / $2.5k – $6k', '₹5L+ / $6k+'];
-// Budget ranges show INR and USD so both Indian and international clients can self-select.
-const projectTypes = [...servicesData.map((s) => s.name), 'Full-time / contract role', 'Something else'];
+const projectTypes = [...servicesData.map((s) => s.name), 'Existing product improvement', 'Something else'];
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -68,6 +67,7 @@ export const Contact = () => {
           if (notificationError) console.warn('Email notification unavailable');
         }).catch(() => console.warn('Email notification unavailable'));
 
+        trackLeadEvent('generate_lead', { lead_source: 'project_form' });
         setSubmitted(true);
         setFormData({ name: '', email: '', phone: '', country: '', projectType: '', budget: '', subject: '', message: '' });
       } catch {
@@ -102,7 +102,7 @@ export const Contact = () => {
               Let's build<br />something great.
             </h1>
             <p className="font-body-main text-[17px] text-on-surface-variant mt-8 max-w-2xl leading-relaxed">
-              I am available for freelance projects only. Tell me about your app, website, SaaS, CRM, HRMS or bid management project, wherever you are. You will get a reply within 24 hours and, if it is a fit, a free discovery call and a fixed quote.
+              I am available for freelance projects only. Tell me about your app, website, SaaS, CRM, HRMS or bid management project, wherever you are. Send your users, essential workflow, integrations and launch needs. I review the scope in writing by email or WhatsApp; no phone or video calls.
             </p>
           </div>
         </motion.div>
@@ -125,12 +125,6 @@ export const Contact = () => {
                   </a>
                 </div>
                 <div className="flex flex-col">
-                  <span className="font-label-mono text-[10px] uppercase text-outline mb-1">Phone</span>
-                  <a className="font-subhead-italic text-subhead-italic italic hover:text-primary transition-colors text-2xl" href="tel:+916394756798">
-                    +91 6394756798
-                  </a>
-                </div>
-                <div className="flex flex-col">
                   <span className="font-label-mono text-[10px] uppercase text-outline mb-1">WhatsApp</span>
                   <a className="font-subhead-italic text-subhead-italic italic hover:text-primary transition-colors text-2xl" href={site.whatsapp} target="_blank" rel="noopener noreferrer">
                     Chat on WhatsApp
@@ -149,7 +143,7 @@ export const Contact = () => {
               <div>
                 <span className="inline-flex items-center gap-2 bg-[#F5F8FF] text-primary px-4 py-2.5 font-label-mono text-[11px] border border-[#2563EB]/20">
                   <span className="w-2 h-2 bg-[#2563EB] rounded-full animate-pulse"></span>
-                  Typically responds within 24 hours
+                  Email & WhatsApp only — no calls
                 </span>
               </div>
               <div>
@@ -167,9 +161,9 @@ export const Contact = () => {
           {/* Right Column: Form */}
           <div className="md:col-span-7">
             <div className="bg-white border border-outline-variant p-8 md:p-12">
-              <p className="font-body-main text-sm text-on-surface-variant mb-6">Clients from any country are welcome. Share your requirements and timeline; budget and phone number are optional.</p>
+              <p className="font-body-main text-sm text-on-surface-variant mb-6">Clients from any country are welcome. Share your requirements and timeline; budget and WhatsApp number are optional.</p>
               <a href="/guides/plan-custom-software-project" className="inline-block text-sm text-primary underline underline-offset-4 mb-6">Need help writing your project brief?</a>
-              <form onSubmit={handleSubmit} className="flex flex-col gap-8">
+              <form id="project-brief" onSubmit={handleSubmit} className="flex flex-col gap-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="flex flex-col gap-2">
                     <label htmlFor="name" className="font-label-mono text-label-mono uppercase text-on-surface-variant">Name</label>
@@ -202,7 +196,7 @@ export const Contact = () => {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="phone" className="font-label-mono text-label-mono uppercase text-on-surface-variant">Phone / WhatsApp <span className="normal-case">(optional)</span></label>
+                    <label htmlFor="phone" className="font-label-mono text-label-mono uppercase text-on-surface-variant">WhatsApp number <span className="normal-case">(optional)</span></label>
                     <input
                       id="phone"
                       type="tel"
@@ -246,21 +240,9 @@ export const Contact = () => {
                   </datalist>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <span id="budget-label" className="font-label-mono text-label-mono uppercase text-on-surface-variant">Estimated budget</span>
-                  <div role="radiogroup" aria-labelledby="budget-label" className="flex flex-wrap gap-2 pt-2">
-                    {budgets.map((b) => (
-                      <button
-                        type="button"
-                        role="radio"
-                        aria-checked={formData.budget === b}
-                        key={b}
-                        onClick={() => setFormData((prev) => ({ ...prev, budget: b }))}
-                        className={`px-3 py-2 font-label-mono text-[11px] border transition-colors ${formData.budget === b ? 'bg-on-surface text-white border-on-surface' : 'border-outline-variant hover:border-on-surface'}`}
-                      >
-                        {b}
-                      </button>
-                    ))}
-                  </div>
+                  <label htmlFor="budget" className="font-label-mono text-label-mono uppercase text-on-surface-variant">Your budget and currency (optional)</label>
+                  <input id="budget" type="text" name="budget" value={formData.budget} onChange={handleInputChange} placeholder="Your range and currency, or not sure yet" className="bg-transparent border-b border-outline-variant py-2 focus:outline-none focus:border-primary font-body-main rounded-none" />
+                  <p className="font-body-main text-sm text-on-surface-variant">This is your planning budget, not a published service price. A quote follows the scope review.</p>
                 </div>
                 <div className="flex flex-col gap-2">
                   <label htmlFor="subject" className="font-label-mono text-label-mono uppercase text-on-surface-variant">Subject</label>
@@ -296,7 +278,7 @@ export const Contact = () => {
                 
                 {submitted && (
                   <div role="status" className="bg-green-50 border border-green-200 text-green-800 p-4 font-body-main text-sm">
-                    Thank you! Your enquiry has been saved. I will reply within 24 hours.
+                    Thank you! Your enquiry has been saved. I will review your brief and reply by email.
                   </div>
                 )}
 
@@ -320,8 +302,8 @@ export const Contact = () => {
         <h2 className="font-headline-md text-[32px] md:text-headline-md text-on-surface mb-12">What happens next</h2>
         <ol className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
-            ['01', 'Reply within 24h', 'I read every message personally and reply with questions or next steps.'],
-            ['02', 'Free discovery call', 'A 30-minute call to understand your goals, users and timeline.'],
+            ['01', 'Review your brief', 'I review your workflow and respond with written questions or next steps.'],
+            ['02', 'Written scope review', 'We clarify users, essential features and dependencies through email or WhatsApp. No calls.'],
             ['03', 'Fixed quote & plan', 'A written scope, milestone plan and fixed price, so you know exactly what you get.'],
           ].map(([n, title, desc]) => (
             <li key={n} className="border-t-2 border-on-surface pt-6">

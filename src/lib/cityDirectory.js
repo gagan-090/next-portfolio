@@ -1,8 +1,8 @@
 import cities from '@/data/cities.json';
 export const cityCountries = {
-  india: { name: 'India', code: 'IN', market: 'india', currency: 'INR', note: 'Share your preferred IST meeting times. UPI or bank transfer and milestone terms are agreed before starting.' },
+  india: { name: 'India', code: 'IN', market: 'india', currency: 'INR', note: 'Share written review deadlines in IST. Currency, payment method and milestone terms are agreed before starting.' },
   'south-africa': { name: 'South Africa', code: 'ZA', market: 'south-africa', currency: 'ZAR', note: 'Share your South African review hours and preferred billing currency. Payment method and any transfer fees are agreed before contract.' },
-  usa: { name: 'USA', code: 'US', market: 'usa', currency: 'USD', note: 'Share your local time zone and preferred review hours. US daylight-saving changes are considered when agreeing meeting times.' },
+  usa: { name: 'USA', code: 'US', market: 'usa', currency: 'USD', note: 'Share your local time zone and preferred review hours. US daylight-saving changes are considered when agreeing written review deadlines.' },
 };
 export const directoryCities = cities;
 export const PAGE_SIZE = 100;

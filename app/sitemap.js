@@ -4,7 +4,6 @@ import { deliveredProjects } from '@/data/deliveredProjects';
 import { servicesData } from '@/data/services';
 import { locationsData } from '@/data/locations';
 import { guidesData } from '@/data/guides';
-import { directoryCities, cityPath } from '@/lib/cityDirectory';
 import { getAllBlogSlugs } from '@/lib/blogService';
 
 export const revalidate = 3600;
@@ -64,6 +63,6 @@ export default async function sitemap() {
   }));
 
   const delivered = deliveredProjects.map((p) => ({ url: `${SITE_URL}/projects/${p.id}`, lastModified: contentUpdated, changeFrequency: 'monthly', priority: 0.8 }));
-  const cities = directoryCities.map((city) => ({ url: `${SITE_URL}${cityPath(city)}`, lastModified: contentUpdated, changeFrequency: 'monthly', priority: 0.5 }));
-  return [...cities, ...staticRoutes, ...services, ...markets, ...guides, ...projects, ...delivered, ...posts];
+  // The city directory is a visitor utility, not thousands of search landing pages.
+  return [...staticRoutes, ...services, ...markets, ...guides, ...projects, ...delivered, ...posts];
 }

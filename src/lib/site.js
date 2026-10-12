@@ -4,10 +4,10 @@ export const SITE_URL = 'https://www.gaganshukla.in';
 export const site = {
   name: 'Gagan Shukla',
   shortName: 'Gagan Shukla',
-  title: 'Gagan Shukla | Freelance App, Web & SaaS Developer',
+  title: 'Freelance Logistics & App Developer | Gagan Shukla',
   tagline: 'Freelance Developer for Apps, Websites, SaaS & Business Software',
   description:
-    'Freelance app, web and SaaS developer with 4+ years of development experience. 28+ clients served. Logistics, CRM and HRMS for India and worldwide.',
+    'Logistics apps, websites and SaaS by Gagan Shukla. 4+ years of experience, 28+ clients served. Send your project brief by email or WhatsApp.',
   jobTitle: 'Freelance Full Stack Developer',
   developmentExperience: '4+ years',
   clientsServed: '28+',
@@ -60,7 +60,7 @@ export const absoluteUrl = (path = '/') => `${SITE_URL}${path.startsWith('/') ? 
 export function pageMetadata({ title, description, path = '/', keywords = [], images, type = 'website', noindex = false }) {
   const url = absoluteUrl(path);
   return {
-    title,
+    title: title.includes('Gagan Shukla') ? { absolute: title } : title,
     description,
     keywords: [...keywords, ...site.keywords.slice(0, 4)],
     alternates: { canonical: url },

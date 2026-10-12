@@ -7,7 +7,7 @@ export const resume = {
   headline: 'Full-Stack Software Engineer · Mobile (Flutter, React Native) · Web (Next.js) · CRM / ERP / HRMS',
   contact: [
     { label: 'gaganshuklarmg@gmail.com', href: 'mailto:gaganshuklarmg@gmail.com' },
-    { label: '+91 63947 56798', href: 'tel:+916394756798' },
+    { label: 'WhatsApp project enquiries', href: 'https://wa.me/916394756798' },
     { label: 'Noida, India · Open to remote', href: null },
     { label: 'gaganshukla.in', href: 'https://www.gaganshukla.in' },
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/gagan-shukla-2624b826b/' },

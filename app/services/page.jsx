@@ -14,10 +14,10 @@ export const metadata = pageMetadata({
 });
 
 const faqs = [
-  { q: 'Do you work with clients outside India?', a: 'Yes. I work remotely with clients worldwide, communicate in English and Hindi, and overlap working hours with US, UK, EU, Middle East and APAC time zones.' },
-  { q: 'How do payments work?', a: 'Fixed-scope projects are split into milestones (typically an advance, mid-project and on launch). Retainers and dedicated-developer engagements are billed monthly. Payments can be made via bank transfer, UPI, Wise or PayPal.' },
-  { q: 'What if I need changes after launch?', a: 'Every project includes a post-launch bug-fix warranty. New features after launch can be added on a retainer or as a new fixed-scope phase.' },
-  { q: 'Do I own the code and data?', a: 'Yes, completely. You get the source code, repository, hosting and store accounts under your name.' },
+  { q: 'Do you work with clients outside India?', a: 'Yes, I accept freelance enquiries worldwide and communicate through email and WhatsApp. Written review deadlines are agreed in your time zone.' },
+  { q: 'How do payments work?', a: 'Payment method, currency and milestones are agreed in the project proposal. Compare included deliverables and recurring costs before approving a quote.' },
+  { q: 'What if I need changes after launch?', a: 'Warranty, support and new features are scoped in the contract. Further work can be quoted as a separate phase or a freelance retainer.' },
+  { q: 'Do I own the code and data?', a: 'Repository access, source ownership, deployment instructions and account handover are agreed in writing. Third-party tools and licences retain their own terms.' },
 ];
 
 export default function ServicesPage() {

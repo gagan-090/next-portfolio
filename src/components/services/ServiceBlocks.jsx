@@ -14,7 +14,7 @@ export const ProcessSection = ({ label = 'HOW WE WORK' }) => (
   <section className="max-w-[1200px] mx-auto px-gutter py-section-padding border-b border-outline-variant">
     <SectionLabel>{label}</SectionLabel>
     <h2 className="font-headline-md text-[32px] md:text-headline-md text-on-surface mb-16 max-w-2xl">
-      A clear process, from first call to launch.
+      A clear process, from written brief to launch.
     </h2>
     <ol className="grid grid-cols-1 md:grid-cols-5 gap-8">
       {processSteps.map((p) => (
@@ -101,28 +101,28 @@ export const FaqSection = ({ faqs, heading = 'Frequently asked questions' }) => 
   </section>
 );
 
-export const HireCta = ({ title = 'Have a project in mind?', service }) => (
+export const HireCta = ({ title = 'Have a project in mind?', service, primaryLabel = 'Send your project brief' }) => (
   <section className="max-w-[1200px] mx-auto px-gutter py-section-padding">
     <div className="bg-[#0A0A0A] text-white p-8 md:p-16 flex flex-col md:flex-row justify-between items-start md:items-center gap-10">
       <div className="max-w-xl">
-        <p className="font-label-mono text-label-mono uppercase tracking-[0.3em] text-white/50 mb-4">Free discovery call</p>
+        <p className="font-label-mono text-label-mono uppercase tracking-[0.3em] text-white/50 mb-4">Email & WhatsApp enquiries</p>
         <h2 className="font-headline-md text-[32px] md:text-[44px] font-bold leading-tight mb-4">{title}</h2>
-        <p className="font-body-main text-white/70">Reply within 24 hours. Fixed quote. You own the code.</p>
+        <p className="font-body-main text-white/70">Share your workflow, essential features and launch needs. I review the scope in writing; no calls required.</p>
       </div>
       <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
         <Link
           href={service ? `/contact?service=${service}` : '/contact'}
           className="text-center bg-white text-[#0A0A0A] px-8 py-4 font-label-mono text-label-mono uppercase tracking-widest hover:bg-[#2563EB] hover:text-white transition-colors"
         >
-          Get a Quote
+          {primaryLabel}
         </Link>
         <a
-          href={site.whatsapp}
+          href={`${site.whatsapp}?text=${encodeURIComponent(`Hi Gagan, I have a freelance ${service || 'software'} project. Users: __. Essential workflow: __. Integrations: __. Timeline: __. Budget: __. Please reply in writing.`)}`}
           target="_blank"
           rel="noopener noreferrer"
           className="text-center border border-white/40 px-8 py-4 font-label-mono text-label-mono uppercase tracking-widest hover:border-white transition-colors"
         >
-          WhatsApp
+          Send on WhatsApp
         </a>
       </div>
     </div>
