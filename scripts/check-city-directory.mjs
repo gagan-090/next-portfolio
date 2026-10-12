@@ -14,7 +14,12 @@ for(const c of cities){
 const base=process.env.BASE_URL || 'http://localhost:3100';
 const sitemap=await(await fetch(`${base}/sitemap.xml`)).text();
 assert.ok(sitemap.includes('/locations</loc>'));
-assert.ok(!sitemap.includes('/locations/'),'Shared-template city and listing routes must not enter sitemap');
+const sitemapUrls=[...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>m[1]);
+assert.equal(sitemapUrls.length,new Set(sitemapUrls).size);
+for(const city of cities) assert.ok(sitemapUrls.includes(`https://www.gaganshukla.in/locations/${city.country}/${city.slug}`));
+assert.equal(sitemapUrls.filter(url=>/\/locations\/[^/]+\/[^/]+$/.test(url)).length,6000);
+assert.ok(!sitemap.includes('/page/'));
+assert.ok(!sitemapUrls.includes('https://www.gaganshukla.in/locations/india'));
 const samples=[];
 for(const country of ['india','south-africa','usa']){
  const rows=cities.filter(c=>c.country===country);
@@ -25,8 +30,16 @@ for(const country of ['india','south-africa','usa']){
 for(const path of samples){
  const response=await fetch(`${base}${path}`);assert.equal(response.status,200,path);
  const html=await response.text();
- assert.match(html,/<meta name="robots" content="noindex, follow"/);
- assert.ok(html.includes(`href="https://gaganshukla.in${path}"`),`${path} canonical`);
+ const isCity=path.split('/').length===4;
+ if(isCity){
+   assert.ok(!/<meta name="robots" content="[^"]*noindex/.test(html), 'City must be indexable');
+   const schemas=[...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(m=>JSON.parse(m[1]));
+   assert.ok(schemas.some(s=>s['@type']==='FAQPage'));
+   const service=schemas.find(s=>s['@type']==='Service');
+   assert.equal(service.areaServed['@type'],'City');
+   assert.equal(service.provider['@id'],'https://www.gaganshukla.in/#business');
+ } else assert.match(html,/<meta name="robots" content="noindex, follow"/);
+ assert.ok(html.includes(`href="https://www.gaganshukla.in${path}"`),`${path} canonical`);
  assert.equal((html.match(/<h1[\s>]/g)||[]).length,1,path);
  assert.match(html,/GeoNames/);
  console.log(`PASS ${path}`);

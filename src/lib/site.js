@@ -1,5 +1,5 @@
 // Single source of truth for identity, URLs and SEO defaults.
-export const SITE_URL = 'https://gaganshukla.in';
+export const SITE_URL = 'https://www.gaganshukla.in';
 
 export const site = {
   name: 'Gagan Shukla',
@@ -7,7 +7,7 @@ export const site = {
   title: 'Gagan Shukla | Freelance App, Web & SaaS Developer',
   tagline: 'Freelance Developer for Apps, Websites, SaaS & Business Software',
   description:
-    'Freelance app, web and SaaS developer with 4+ years of development experience. Logistics, CRM and HRMS software for India and worldwide. Freelance projects only.',
+    'Freelance app, web and SaaS developer with 4+ years of development experience. 28+ clients served. Logistics, CRM and HRMS for India and worldwide.',
   jobTitle: 'Freelance Full Stack Developer',
   developmentExperience: '4+ years',
   clientsServed: '28+',

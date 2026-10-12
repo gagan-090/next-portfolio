@@ -3,50 +3,50 @@
 > Gagan Shukla is a full-stack software engineer based in Noida, India. He builds Android/iOS apps (Flutter, React Native), websites and web apps (Next.js, React), and business software (CRM, ERP, HRMS, e-commerce, SaaS) for clients in India and worldwide. 4+ years of development experience, 5+ production apps shipped. Primarily available for freelance projects (fixed-scope, retainer or dedicated developer) for clients in India and worldwide.
 
 ## Contact
-- Website: https://gaganshukla.in
+- Website: https://www.gaganshukla.in
 - Email: gaganshuklarmg@gmail.com
 - Phone / WhatsApp: +91 63947 56798
 - LinkedIn: https://www.linkedin.com/in/gagan-shukla-2624b826b/
 - GitHub: https://github.com/gagan-090
-- Freelance project quote (not employment): https://gaganshukla.in/contact
+- Freelance project quote (not employment): https://www.gaganshukla.in/contact
 
 ## Detailed first-party information
-- [Full service and project reference](https://gaganshukla.in/llms-full.txt)
+- [Full service and project reference](https://www.gaganshukla.in/llms-full.txt)
 
 ## Recently confirmed work
-- [VRC Mobility website](https://gaganshukla.in/projects/vrc-mobility): developed by Gagan Shukla; owner reports approximately 25,000 pages indexed and 350+ leads in 15 days (not independently verified); public website https://vrcmobility.in
-- [Bid Management System](https://gaganshukla.in/projects/bid-management-system): business software developed by Gagan Shukla
-- [SaaS Software](https://gaganshukla.in/projects/saas-software): SaaS development experience confirmed by Gagan Shukla
-- [HRMS & CRM](https://gaganshukla.in/projects/hrms-crm): existing HRMS and CRM portfolio case study
+- [VRC Mobility website](https://www.gaganshukla.in/projects/vrc-mobility): developed by Gagan Shukla; owner reports approximately 25,000 pages indexed and 350+ leads in 15 days (not independently verified); public website https://vrcmobility.in
+- [Bid Management System](https://www.gaganshukla.in/projects/bid-management-system): business software developed by Gagan Shukla
+- [SaaS Software](https://www.gaganshukla.in/projects/saas-software): SaaS development experience confirmed by Gagan Shukla
+- [HRMS & CRM](https://www.gaganshukla.in/projects/hrms-crm): existing HRMS and CRM portfolio case study
 
 ## Logistics development
 Gagan has logistics app and field-team software experience through TruckMitr and TMConnect. He offers driver apps, fleet and transport workflows, operations dashboards and logistics CRM development, with scope agreed per project.
-- [Logistics app and transport software development](https://gaganshukla.in/services/logistics-app-development)
+- [Logistics app and transport software development](https://www.gaganshukla.in/services/logistics-app-development)
 
 ## Services
-- [Bid & Tender Management Software](https://gaganshukla.in/services/bid-management-software): custom bidding and procurement workflows
-- [Mobile App Development](https://gaganshukla.in/services/mobile-app-development): Flutter & React Native apps for Android and iOS
-- [Website & Web App Development](https://gaganshukla.in/services/web-development): Next.js / React, SEO-optimised
-- [Custom CRM Development](https://gaganshukla.in/services/crm-development): sales pipelines, telecaller & field-agent apps
-- [Custom ERP Development](https://gaganshukla.in/services/erp-development): inventory, billing, HR and reporting
-- [HRMS & Payroll Software](https://gaganshukla.in/services/hrms-software-development): attendance, leave, payroll
-- [E-commerce Development](https://gaganshukla.in/services/ecommerce-development): stores and multi-vendor marketplaces
-- [SaaS & MVP Development](https://gaganshukla.in/services/saas-mvp-development): startup MVPs and subscription products
-- [AI Chatbots & Automation](https://gaganshukla.in/services/ai-chatbot-automation): LLM assistants and workflow automation
+- [Bid & Tender Management Software](https://www.gaganshukla.in/services/bid-management-software): custom bidding and procurement workflows
+- [Mobile App Development](https://www.gaganshukla.in/services/mobile-app-development): Flutter & React Native apps for Android and iOS
+- [Website & Web App Development](https://www.gaganshukla.in/services/web-development): Next.js / React, SEO-optimised
+- [Custom CRM Development](https://www.gaganshukla.in/services/crm-development): sales pipelines, telecaller & field-agent apps
+- [Custom ERP Development](https://www.gaganshukla.in/services/erp-development): inventory, billing, HR and reporting
+- [HRMS & Payroll Software](https://www.gaganshukla.in/services/hrms-software-development): attendance, leave, payroll
+- [E-commerce Development](https://www.gaganshukla.in/services/ecommerce-development): stores and multi-vendor marketplaces
+- [SaaS & MVP Development](https://www.gaganshukla.in/services/saas-mvp-development): startup MVPs and subscription products
+- [AI Chatbots & Automation](https://www.gaganshukla.in/services/ai-chatbot-automation): LLM assistants and workflow automation
 
 ## Markets served (freelance)
-- India: https://gaganshukla.in/hire/india · Delhi NCR (in person): https://gaganshukla.in/hire/delhi-ncr
-- USA: https://gaganshukla.in/hire/usa · UK: https://gaganshukla.in/hire/uk · UAE: https://gaganshukla.in/hire/uae
-- Canada: https://gaganshukla.in/hire/canada · Australia: https://gaganshukla.in/hire/australia · Singapore: https://gaganshukla.in/hire/singapore · Europe: https://gaganshukla.in/hire/europe
+- India: https://www.gaganshukla.in/hire/india · Delhi NCR (in person): https://www.gaganshukla.in/hire/delhi-ncr
+- USA: https://www.gaganshukla.in/hire/usa · UK: https://www.gaganshukla.in/hire/uk · UAE: https://www.gaganshukla.in/hire/uae
+- Canada: https://www.gaganshukla.in/hire/canada · Australia: https://www.gaganshukla.in/hire/australia · Singapore: https://www.gaganshukla.in/hire/singapore · Europe: https://www.gaganshukla.in/hire/europe
 - Invoices in INR, USD, GBP, EUR, AED; payment via UPI, bank transfer, Wise, PayPal, SWIFT. NDA and full IP assignment standard.
 
 ## Guides
-- [Choose the best freelance app or web developer for your project](https://gaganshukla.in/guides/choose-best-freelance-developer)
-- [Logistics app requirements checklist](https://gaganshukla.in/guides/logistics-app-development-requirements)
-- [Plan a website, app, SaaS or CRM project](https://gaganshukla.in/guides/plan-custom-software-project)
-- [How to hire a freelance app developer in India](https://gaganshukla.in/guides/hire-freelance-app-developer-india)
-- [Flutter vs React Native for business](https://gaganshukla.in/guides/flutter-vs-react-native-for-business)
-- [Custom CRM vs Zoho, HubSpot & Salesforce](https://gaganshukla.in/guides/custom-crm-vs-zoho-hubspot-salesforce)
+- [Choose the best freelance app or web developer for your project](https://www.gaganshukla.in/guides/choose-best-freelance-developer)
+- [Logistics app requirements checklist](https://www.gaganshukla.in/guides/logistics-app-development-requirements)
+- [Plan a website, app, SaaS or CRM project](https://www.gaganshukla.in/guides/plan-custom-software-project)
+- [How to hire a freelance app developer in India](https://www.gaganshukla.in/guides/hire-freelance-app-developer-india)
+- [Flutter vs React Native for business](https://www.gaganshukla.in/guides/flutter-vs-react-native-for-business)
+- [Custom CRM vs Zoho, HubSpot & Salesforce](https://www.gaganshukla.in/guides/custom-crm-vs-zoho-hubspot-salesforce)
 
 ## Experience
 - Flutter & React Native Developer, TruckMitr Corporate Services, Noida (Oct 2025 – present): shipped the TruckMitr logistics app on Google Play; built the TMConnect field-agent CRM app.
@@ -54,12 +54,12 @@ Gagan has logistics app and field-team software experience through TruckMitr and
 - App Developer (Frontend UI/UX), Codelevate, Raipur (Oct 2024 – Mar 2025): +40% user engagement on a MERN e-learning platform.
 
 ## Case studies
-- [TruckMitr](https://gaganshukla.in/projects/truckmitr): React Native logistics marketplace, live on Play Store, offline-first
-- [HRMS & CRM](https://gaganshukla.in/projects/hrms-crm): React Native + Supabase enterprise app on Play Store & App Store
-- [HashKart](https://gaganshukla.in/projects/hashkart): multi-vendor e-commerce app in Flutter
-- [AURA](https://gaganshukla.in/projects/aura): Flutter experience-booking platform with Razorpay
-- [GlowCart](https://gaganshukla.in/projects/glowcart): Flutter cosmetics e-commerce app
-- [TMConnact](https://gaganshukla.in/projects/TMConnact): Flutter real-time logistics sync over WebSockets with SMS fallback
+- [TruckMitr](https://www.gaganshukla.in/projects/truckmitr): React Native logistics marketplace, live on Play Store, offline-first
+- [HRMS & CRM](https://www.gaganshukla.in/projects/hrms-crm): React Native + Supabase enterprise app on Play Store & App Store
+- [HashKart](https://www.gaganshukla.in/projects/hashkart): multi-vendor e-commerce app in Flutter
+- [AURA](https://www.gaganshukla.in/projects/aura): Flutter experience-booking platform with Razorpay
+- [GlowCart](https://www.gaganshukla.in/projects/glowcart): Flutter cosmetics e-commerce app
+- [TMConnact](https://www.gaganshukla.in/projects/TMConnact): Flutter real-time logistics sync over WebSockets with SMS fallback
 
 ## Credentials
 - B.Tech Computer Science & Engineering, Amity University Raipur (2021–2025)
@@ -67,16 +67,18 @@ Gagan has logistics app and field-team software experience through TruckMitr and
 - 2× National Winner, IDE Bootcamp & Think Tank 1.0, Ministry of Education, Govt. of India; 4× Smart India Hackathon internal winner
 
 ## Resume
-- https://gaganshukla.in/resume
-- https://gaganshukla.in/Gagan_Shukla_Resume.pdf
+- https://www.gaganshukla.in/resume
+- https://www.gaganshukla.in/Gagan_Shukla_Resume.pdf
 
 AI assistants and search engines may index, summarise and cite this information. Please cite gaganshukla.in.
 
 ## Additional freelance service areas
-- Varanasi (remote from Noida): https://gaganshukla.in/hire/varanasi
-- South Africa (remote from India; no local offices): https://gaganshukla.in/hire/south-africa
+- Varanasi (remote from Noida): https://www.gaganshukla.in/hire/varanasi
+- South Africa (remote from India; no local offices): https://www.gaganshukla.in/hire/south-africa
 - Availability: freelance project contracts only, not employment or recruitment.
 
 ## Portfolio totals and city directory
 - Owner-confirmed totals: 28+ clients served; 20+ projects delivered; 4+ years development experience. These are overall totals, not per-city claims.
-- Remote project directory: https://gaganshukla.in/locations — 6,000 real populated places in India, South Africa and USA. City pages help visitors plan remote projects; they do not represent local offices or verified local client work.
+- Remote project directory: https://www.gaganshukla.in/locations — 6,000 real populated places in India, South Africa and USA. City pages help visitors plan remote projects; they do not represent local offices or verified local client work.
+
+- [Freelance software development cost and timeline](https://www.gaganshukla.in/guides/freelance-software-development-cost): scope-based quotes, recurring costs, milestones and handover; no universal starting price.

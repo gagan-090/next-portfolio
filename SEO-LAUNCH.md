@@ -17,9 +17,9 @@ This checkout contains the on-site changes. It is not connected to a deployment 
 ## Publish and verify
 
 1. Deploy this Next.js checkout to the existing host for `gaganshukla.in`. Preserve the existing Supabase URL and anonymous key. Do not place service-role credentials in `NEXT_PUBLIC_` variables.
-2. Keep one preferred origin: `https://gaganshukla.in`. Configure hosting/domain redirects from HTTP and `www` to that origin. Application redirects already preserve old `/work`, `/skills` and resume URLs.
-3. Run `BASE_URL=https://gaganshukla.in npm run seo:check` against the deployed site. This checks rendered headings, canonical tags, descriptions, social previews, structured data, crawl rules, AI references, sitemap entries and missing-project 404s.
-4. Verify ownership in Google Search Console and Bing Webmaster Tools. Optional verification codes are supported in `.env.example`; they must be configured before deployment. Submit `https://gaganshukla.in/sitemap.xml` in both accounts. Request indexing for the homepage and new project/service pages.
+2. Keep one preferred origin: `https://www.gaganshukla.in`. Configure hosting/domain redirects from HTTP and the non-www address to that origin. Application redirects already preserve old `/work`, `/skills` and resume URLs.
+3. Run `BASE_URL=https://www.gaganshukla.in npm run seo:check` against the deployed site. This checks rendered headings, canonical tags, descriptions, social previews, structured data, crawl rules, AI references, sitemap entries and missing-project 404s.
+4. Verify ownership in Google Search Console and Bing Webmaster Tools. Optional verification codes are supported in `.env.example`; they must be configured before deployment. Submit `https://www.gaganshukla.in/sitemap.xml` in both accounts. Request indexing for the homepage and new project/service pages.
 5. Use Google's Rich Results Test on representative pages. Service/person markup describes identity; it does not guarantee special search treatment. Ordinary commercial sites should not expect FAQ rich results merely because FAQ markup exists.
 6. With a real test enquiry, confirm the contact record and email notification in your own Supabase/Resend accounts. No live enquiry or email was submitted during source validation.
 
@@ -62,4 +62,14 @@ Owner-confirmed homepage totals are 28+ clients served and 20+ projects delivere
 
 City pages generate and cache on demand; only three examples are pre-rendered at build time. Country listings have 100 entries per page and country-wide search. Time conversion uses the recorded IANA zone and the selected date for daylight-saving handling. GeoNames record and licence attribution appear on all pages. Rebuild the data with `python3 scripts/import-cities.py cities500.zip admin1CodesASCII.txt` after downloading those files from the official GeoNames dump.
 
-The directory root is indexable and in the sitemap. Shared-template city and listing pages are deliberately `noindex, follow` and excluded from the sitemap. Do not bulk-enable indexing without substantial city-specific buyer value and evidence. There are no claims of 6,000 local offices, local client histories or verified best-developer rankings.
+The directory root and all 6,000 city pages are indexable and in the sitemap following the owner’s request. Country and paginated listing pages remain `noindex, follow` and outside the sitemap. City pages include source-linked place details, a dated meeting converter, project briefs, service-area schema and visible FAQs. Indexability does not establish that Google will accept or rank the content; continue adding useful local project detail as it becomes available. There are no claims of 6,000 local offices, local client histories or verified best-developer rankings.
+
+## October search growth update
+
+The live host redirects to `https://www.gaganshukla.in`, so canonical tags, schema IDs, sitemaps, crawler references and tests now use that preferred origin. The first-party cost/timeline guide and service-page direct answers address commercial search questions without inventing prices or delivery dates. Service wording now consistently describes freelance retainers.
+
+Baseline from the owner’s three-month Search Console screenshot: 4 clicks, 733 impressions, 0.5% CTR. The 1,000-click monthly target is an aspiration, not a forecast or guarantee. Check October 1–31 in Search Console and compare queries, pages, countries and device types; prioritise pages with impressions and low CTR. Track qualified enquiries alongside clicks. At a hypothetical 2% CTR, 1,000 clicks requires 50,000 impressions; at 5%, it requires 20,000.
+
+After the GitHub/Vercel deployment, resubmit the www sitemap in Search Console, inspect homepage, cost guide, logistics service and representative city URLs, and verify the Google-selected canonical. Account access is needed for submission and query analysis; no Search Console settings have been changed from this workspace.
+
+Reference: https://developers.google.com/search/docs/appearance/ai-features — Google states no special AI markup is required; eligible indexed pages, useful content, internal links and matching structured data remain relevant.

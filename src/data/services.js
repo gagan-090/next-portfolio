@@ -14,8 +14,8 @@ export const engagementModels = [
   },
   {
     icon: 'badge',
-    title: 'Dedicated Developer',
-    desc: 'I join your team full-time or part-time, remotely, working in your sprints, repo and tools.',
+    title: 'Freelance Development Retainer',
+    desc: 'A freelance project contract for a reserved block of development work, with agreed scope, review hours and deliverables.',
   },
 ];
 

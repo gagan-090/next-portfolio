@@ -76,6 +76,13 @@ export default async function ServicePage({ params }) {
         </div>
       </section>
 
+      <section className="max-w-[1200px] mx-auto px-gutter py-10 border-b border-outline-variant">
+        <SectionLabel>QUICK ANSWER</SectionLabel>
+        <h2 className="font-headline-md text-2xl font-bold mb-4">{service.faqs[0].q}</h2>
+        <p className="font-body-main text-lg text-on-surface-variant leading-relaxed max-w-3xl mb-5">{service.faqs[0].a}</p>
+        <p className="font-body-main text-on-surface-variant mb-4">4+ years of development experience · 28+ clients served · 20+ projects delivered. Freelance project contracts for clients in India and worldwide.</p>
+        <div className="flex flex-wrap gap-5"><Link className="text-primary underline" href="/guides/freelance-software-development-cost">Cost and timeline: what affects your quote →</Link><Link className="text-primary underline" href="/guides/plan-custom-software-project">Prepare your requirements →</Link></div>
+      </section>
       {/* Intro + problems */}
       <section className="max-w-[1200px] mx-auto px-gutter py-section-padding border-b border-outline-variant">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">

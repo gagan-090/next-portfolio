@@ -1,8 +1,8 @@
-// Run against a local or deployed site: BASE_URL=https://gaganshukla.in npm run seo:check
+// Run against a local or deployed site: BASE_URL=https://www.gaganshukla.in npm run seo:check
 import assert from 'node:assert/strict';
 const baseUrl = (process.env.BASE_URL || 'http://localhost:3000').replace(/\/$/, '');
-const canonicalBase = 'https://gaganshukla.in';
-const paths = ['/', '/locations', '/projects', '/projects/vrc-mobility', '/projects/bid-management-system', '/projects/saas-software', '/projects/hrms-crm', '/services/web-development', '/services/saas-mvp-development', '/services/bid-management-software', '/hire/varanasi', '/hire/south-africa', '/hire/delhi-ncr', '/hire', '/hire/india', '/hire/usa', '/hire/uk', '/hire/uae', '/contact', '/guides/plan-custom-software-project', '/guides/choose-best-freelance-developer', '/guides/logistics-app-development-requirements', '/services/logistics-app-development', '/about', '/experience', '/resume'];
+const canonicalBase = 'https://www.gaganshukla.in';
+const paths = ['/', '/locations', '/projects', '/projects/vrc-mobility', '/projects/bid-management-system', '/projects/saas-software', '/projects/hrms-crm', '/services/web-development', '/services/saas-mvp-development', '/services/bid-management-software', '/hire/varanasi', '/hire/south-africa', '/hire/delhi-ncr', '/hire', '/hire/india', '/hire/usa', '/hire/uk', '/hire/uae', '/contact', '/guides/freelance-software-development-cost', '/guides/plan-custom-software-project', '/guides/choose-best-freelance-developer', '/guides/logistics-app-development-requirements', '/services/logistics-app-development', '/about', '/experience', '/resume'];
 async function read(path) {
   const response = await fetch(`${baseUrl}${path}`, { signal: AbortSignal.timeout(30000) });
   assert.equal(response.status, 200, `${path} must return HTTP 200`);
@@ -42,7 +42,7 @@ for (const path of paths) {
 const sitemap = await read('/sitemap.xml');
 for (const path of paths) assert.ok(sitemap.includes(`${canonicalBase}${path === '/' ? '</loc>' : `${path}</loc>`}`), `${path} must be in sitemap`);
 const robots = await read('/robots.txt');
-assert.match(robots, /Sitemap: https:\/\/gaganshukla\.in\/sitemap\.xml/);
+assert.ok(robots.includes(`Sitemap: ${canonicalBase}/sitemap.xml`));
 assert.match(robots, /User-Agent: OAI-SearchBot/i);
 assert.match(robots, /Disallow: \/api/);
 for (const path of ['/llms.txt', '/llms-full.txt']) {

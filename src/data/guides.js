@@ -3,6 +3,140 @@
 // Section types: p (paragraph), ul / ol (lists), h3 (sub-heading), tip (callout).
 
 export const guidesData = [
+{
+  "slug": "freelance-software-development-cost",
+  "title": "Freelance Software Development Cost: What Goes Into an App, Website or SaaS Quote?",
+  "metaTitle": "Freelance App, Website & SaaS Development Cost — Quote Checklist",
+  "description": "Understand software development cost and timelines before requesting a quote: scope, roles, integrations, testing, hosting, payment milestones and source-code handover.",
+  "keywords": [
+    "freelance app development cost",
+    "website development cost India",
+    "SaaS MVP development cost",
+    "custom CRM development cost",
+    "logistics app development cost"
+  ],
+  "published": "2026-10-12",
+  "readingTime": 5,
+  "relatedServices": [
+    "web-development",
+    "mobile-app-development",
+    "saas-mvp-development",
+    "crm-development",
+    "logistics-app-development"
+  ],
+  "sections": [
+    {
+      "heading": "How much does freelance software development cost?",
+      "body": [
+        {
+          "type": "p",
+          "text": "There is no reliable single price for every app, website or SaaS product. A quote depends on what users must do, how many roles need access, the integrations involved, existing content or data, and the work needed to test and launch it. Gagan Shukla provides a project-specific written quote after reviewing your requirements; this guide does not publish a starting price or imply that every project fits one package."
+        },
+        {
+          "type": "p",
+          "text": "For a useful comparison, send the same brief to each developer. A cheaper total may exclude design, backend work, deployment, testing or handover that another quote includes. Ask each supplier to list assumptions, exclusions and recurring costs."
+        }
+      ]
+    },
+    {
+      "heading": "Website, mobile app and SaaS scopes differ",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "A business website: content, service pages, contact forms, editing needs, mobile layout and the launch setup.",
+            "A mobile app: Android or iOS targets, user journeys, backend, authentication, permissions, notifications, offline behaviour and store submission.",
+            "A SaaS product: tenant access, customer onboarding, subscription rules, admin tools, support workflows and hosting.",
+            "A CRM or HRMS: staff roles, approval rules, records, reports and migration from existing systems.",
+            "A logistics product: dispatcher and driver workflows, trip states, location requirements, proof of delivery and network failure handling."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Choose one essential end-to-end workflow for the first release. List later features separately so a version-one quote does not silently include your entire long-term roadmap."
+        }
+      ]
+    },
+    {
+      "heading": "Separate development fees from running costs",
+      "body": [
+        {
+          "type": "p",
+          "text": "Your development contract and your software operating costs are separate decisions. Hosting, domains, SMS, maps, payment-provider charges, email services and app-store accounts may have recurring or usage-based fees. Your business should own the relevant accounts and review the providers’ current charges before approval."
+        },
+        {
+          "type": "ul",
+          "items": [
+            "Ask which third-party accounts you need and who will pay their invoices.",
+            "Specify whether data migration, content writing and translation are included.",
+            "Record which launch tasks and handover documents are included.",
+            "Agree the support period and how later feature requests are priced."
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "What determines the delivery timeline?",
+      "body": [
+        {
+          "type": "p",
+          "text": "A credible timeline follows the agreed scope. It also depends on the availability of content, design approvals, integration documentation, test accounts and the person accepting each milestone. Store reviews and third-party approvals are external dependencies and should not be promised as fixed dates controlled by the developer."
+        },
+        {
+          "type": "p",
+          "text": "Break delivery into reviewable milestones: discovery and scope, approved workflows, a working core journey, integration and testing, then launch and handover. Each milestone needs an acceptance checklist, not only a calendar date."
+        }
+      ]
+    },
+    {
+      "heading": "Compare a fixed quote and a freelance retainer",
+      "body": [
+        {
+          "type": "p",
+          "text": "A fixed-scope quote suits a clearly defined website, app release or MVP. A freelance retainer suits ongoing changes when priorities evolve and you want an agreed block of development time. In both cases, document deliverables, review hours, ownership and a process for approving additional work. These are freelance contracts, not employment offers."
+        }
+      ]
+    },
+    {
+      "heading": "Send a brief that can be quoted",
+      "body": [
+        {
+          "type": "ul",
+          "items": [
+            "Describe your business problem and who will use the product.",
+            "List essential workflows, user roles and launch platforms.",
+            "Name required integrations and existing data or software.",
+            "Share content, designs or reference products you already have.",
+            "State your preferred launch window, review time zone and budget range.",
+            "Name the person responsible for approving scope and milestones."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Gagan’s relevant portfolio includes VRC Mobility, TruckMitr, HRMS/CRM, bid management and SaaS work. Review the closest project and use the contact page to discuss your requirements. Prior project results are useful context, not guarantees of leads or revenue for a new product."
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Does Gagan publish a fixed starting price for every app or website?",
+      "a": "No. Gagan quotes after reviewing scope, platforms, roles, integrations, content, migration and testing requirements. Request a written breakdown that separates development fees and recurring service costs."
+    },
+    {
+      "q": "How can I reduce the cost of an MVP?",
+      "a": "Define one essential customer workflow, reuse suitable existing content or services, and defer nonessential features. Agree the acceptance criteria for the first release before requesting a quote."
+    },
+    {
+      "q": "Will I own the source code?",
+      "a": "Confirm ownership, repository access and handover deliverables in the written contract. The scope should define deployment instructions, account access and support terms."
+    },
+    {
+      "q": "Can clients outside India request a project quote?",
+      "a": "Yes. Gagan accepts remote freelance enquiries worldwide. Scope, communication hours, payment currency, transfer arrangements and milestones are agreed before work begins."
+    }
+  ]
+},
   {
     slug: 'choose-best-freelance-developer',
     title: 'How to Choose the Best Freelance Developer for Your App or Website',

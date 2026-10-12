@@ -36,7 +36,7 @@ BASE_URL=http://localhost:3000 npm run resume:pdf   # writes public/Gagan_Shukla
 
 ## SEO checklist after deploy
 
-1. Add the domain in Google Search Console and submit `https://gaganshukla.in/sitemap.xml`.
+1. Add the domain in Google Search Console and submit `https://www.gaganshukla.in/sitemap.xml`.
 2. Same in Bing Webmaster Tools (it also feeds ChatGPT search).
 3. Create or claim a Google Business Profile ("Software developer", Noida) linking to the site.
 4. Validate a page at https://search.google.com/test/rich-results.

@@ -18,6 +18,7 @@ export const metadata = {
 };
 
 const homeFaqs = [
+  { q: 'How many clients and projects has Gagan Shukla served?', a: 'Gagan reports 28+ clients served and 20+ projects delivered across his development work. These are overall portfolio totals, not claims of completed work in every listed service city.' },
   { q: 'How much development experience does Gagan Shukla have?', a: 'Gagan Shukla has 4+ years of development experience across mobile apps, websites and business software. His professional employment history is listed separately on the experience page.' },
   { q: 'Can Gagan develop logistics and transport software?', a: 'Yes. Gagan has worked on TruckMitr and TMConnect and offers freelance logistics app, fleet management and transport software development for Indian and international businesses.' },
   { q: 'What websites and business software has Gagan developed?', a: 'Gagan developed VRC Mobility (vrcmobility.in), a bid management system, HRMS and SaaS software. His portfolio also covers mobile apps, e-commerce and logistics products. Discuss your required features directly with him.' },
@@ -27,7 +28,7 @@ const homeFaqs = [
   },
   {
     q: 'Is Gagan Shukla available for freelance projects?',
-    a: 'Yes. He takes on fixed-scope projects, monthly retainers and dedicated-developer engagements for clients in India, the USA, UK, UAE, Europe, Canada, Australia and Singapore. Use the contact form, email gaganshuklarmg@gmail.com or message on WhatsApp at +91 63947 56798.',
+    a: 'Yes. He takes on fixed-scope freelance projects and freelance development retainers for clients in India, the USA, UK, UAE, Europe, Canada, Australia and Singapore. Use the contact form, email gaganshuklarmg@gmail.com or message on WhatsApp at +91 63947 56798.',
   },
   {
     q: 'How many production apps has Gagan Shukla shipped?',
